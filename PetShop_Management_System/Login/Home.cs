@@ -7,14 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+
 
 namespace Login
 {
     public partial class Home : Form
     {
-        public Home()
+        public Home(string username)
         {
             InitializeComponent();
+            lbUsername.Text = "Xin chào, " + username;
         }
         private Form activeForm = null;
 
@@ -72,6 +75,18 @@ namespace Login
         private void btPet_Click(object sender, EventArgs e)
         {
             OpenChildForm(new PetModule());
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+                if (MessageBox.Show("Bạn có chắc muốn đăng xuất không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    this.Hide();
+                LogForm loginForm = new LogForm();
+                    loginForm.ShowDialog();
+                    this.Close();
+                }
+
         }
     }
 }

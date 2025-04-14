@@ -42,21 +42,22 @@
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.lblDog = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbDog = new System.Windows.Forms.Label();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.guna2GradientPanel5 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.lBxPetVaccine = new System.Windows.Forms.ListBox();
-            this.lBxLowStock = new System.Windows.Forms.ListBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.lBxLowStock = new System.Windows.Forms.ListBox();
+            this.lBxPetVaccine = new System.Windows.Forms.ListBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.lbTotal = new System.Windows.Forms.Label();
             this.guna2GradientPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.guna2GradientPanel3.SuspendLayout();
@@ -66,8 +67,8 @@
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
-            this.guna2GradientPanel5.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2GradientPanel4
@@ -224,23 +225,23 @@
             this.lblDog.Text = "20";
             this.lblDog.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label2
+            // lbDog
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Century Schoolbook", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(238, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 37);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Dogs";
+            this.lbDog.AutoSize = true;
+            this.lbDog.BackColor = System.Drawing.Color.Transparent;
+            this.lbDog.Font = new System.Drawing.Font("Century Schoolbook", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDog.ForeColor = System.Drawing.Color.White;
+            this.lbDog.Location = new System.Drawing.Point(238, 0);
+            this.lbDog.Name = "lbDog";
+            this.lbDog.Size = new System.Drawing.Size(97, 37);
+            this.lbDog.TabIndex = 2;
+            this.lbDog.Text = "Dogs";
             // 
             // guna2GradientPanel1
             // 
             this.guna2GradientPanel1.Controls.Add(this.pictureBox1);
             this.guna2GradientPanel1.Controls.Add(this.lblDog);
-            this.guna2GradientPanel1.Controls.Add(this.label2);
+            this.guna2GradientPanel1.Controls.Add(this.lbDog);
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(111)))), ((int)(((byte)(221)))));
             this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
             this.guna2GradientPanel1.Location = new System.Drawing.Point(73, 53);
@@ -261,7 +262,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.AliceBlue;
             this.panel1.Controls.Add(this.guna2GradientPanel1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.guna2GradientPanel4);
@@ -291,81 +292,13 @@
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
-            // guna2GradientPanel5
-            // 
-            this.guna2GradientPanel5.Controls.Add(this.lBxPetVaccine);
-            this.guna2GradientPanel5.Controls.Add(this.lBxLowStock);
-            this.guna2GradientPanel5.Controls.Add(this.label4);
-            this.guna2GradientPanel5.Controls.Add(this.label9);
-            this.guna2GradientPanel5.Controls.Add(this.label3);
-            this.guna2GradientPanel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(111)))), ((int)(((byte)(221)))));
-            this.guna2GradientPanel5.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel5.Location = new System.Drawing.Point(3, 457);
-            this.guna2GradientPanel5.Name = "guna2GradientPanel5";
-            this.guna2GradientPanel5.Size = new System.Drawing.Size(1145, 232);
-            this.guna2GradientPanel5.TabIndex = 10;
-            // 
-            // lBxPetVaccine
-            // 
-            this.lBxPetVaccine.FormattingEnabled = true;
-            this.lBxPetVaccine.ItemHeight = 25;
-            this.lBxPetVaccine.Location = new System.Drawing.Point(433, 72);
-            this.lBxPetVaccine.Name = "lBxPetVaccine";
-            this.lBxPetVaccine.Size = new System.Drawing.Size(301, 129);
-            this.lBxPetVaccine.TabIndex = 8;
-            // 
-            // lBxLowStock
-            // 
-            this.lBxLowStock.FormattingEnabled = true;
-            this.lBxLowStock.ItemHeight = 25;
-            this.lBxLowStock.Location = new System.Drawing.Point(30, 72);
-            this.lBxLowStock.Name = "lBxLowStock";
-            this.lBxLowStock.Size = new System.Drawing.Size(301, 129);
-            this.lBxLowStock.TabIndex = 8;
-            // 
-            // label4
-            // 
-            this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(815, 116);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(276, 79);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "0.000000000000";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Century Schoolbook", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(482, 32);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(214, 37);
-            this.label9.TabIndex = 2;
-            this.label9.Text = "Pet Vaccine";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Century Schoolbook", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(815, 37);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(285, 37);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Total daily sales";
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Century Schoolbook", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Transparent;
-            this.label8.Location = new System.Drawing.Point(440, 49);
+            this.label8.Location = new System.Drawing.Point(441, 28);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(201, 37);
             this.label8.TabIndex = 2;
@@ -382,20 +315,101 @@
             this.panel2.Size = new System.Drawing.Size(1151, 100);
             this.panel2.TabIndex = 11;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Century Schoolbook", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(812, 38);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(285, 37);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Total daily sales";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Century Schoolbook", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(479, 33);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(214, 37);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "Pet Vaccine";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Century Schoolbook", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(63, 22);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(191, 37);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "Low Stock";
+            // 
+            // lBxLowStock
+            // 
+            this.lBxLowStock.FormattingEnabled = true;
+            this.lBxLowStock.ItemHeight = 25;
+            this.lBxLowStock.Location = new System.Drawing.Point(27, 73);
+            this.lBxLowStock.Name = "lBxLowStock";
+            this.lBxLowStock.Size = new System.Drawing.Size(301, 129);
+            this.lBxLowStock.TabIndex = 8;
+            // 
+            // lBxPetVaccine
+            // 
+            this.lBxPetVaccine.FormattingEnabled = true;
+            this.lBxPetVaccine.ItemHeight = 25;
+            this.lBxPetVaccine.Location = new System.Drawing.Point(430, 73);
+            this.lBxPetVaccine.Name = "lBxPetVaccine";
+            this.lBxPetVaccine.Size = new System.Drawing.Size(301, 129);
+            this.lBxPetVaccine.TabIndex = 8;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.panel3.Controls.Add(this.lbTotal);
+            this.panel3.Controls.Add(this.lBxPetVaccine);
+            this.panel3.Controls.Add(this.lBxLowStock);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.label9);
+            this.panel3.Controls.Add(this.label10);
+            this.panel3.Location = new System.Drawing.Point(0, 445);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1148, 248);
+            this.panel3.TabIndex = 12;
+            // 
+            // lbTotal
+            // 
+            this.lbTotal.BackColor = System.Drawing.Color.White;
+            this.lbTotal.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTotal.ForeColor = System.Drawing.Color.Black;
+            this.lbTotal.Location = new System.Drawing.Point(821, 115);
+            this.lbTotal.Name = "lbTotal";
+            this.lbTotal.Size = new System.Drawing.Size(276, 79);
+            this.lbTotal.TabIndex = 7;
+            this.lbTotal.Text = "0.000000000000";
+            this.lbTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1151, 693);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.guna2GradientPanel5);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Dashboard";
             this.Text = "Dashboard";
+            this.Load += new System.EventHandler(this.Dashboard_Load);
             this.guna2GradientPanel4.ResumeLayout(false);
             this.guna2GradientPanel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -410,10 +424,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.guna2GradientPanel5.ResumeLayout(false);
-            this.guna2GradientPanel5.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -427,7 +441,7 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
         private System.Windows.Forms.Label lblDog;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbDog;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lbBird;
@@ -438,14 +452,15 @@
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel5;
-        private System.Windows.Forms.ListBox lBxPetVaccine;
-        private System.Windows.Forms.ListBox lBxLowStock;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PageSetupDialog pageSetupDialog1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label lbTotal;
+        private System.Windows.Forms.ListBox lBxPetVaccine;
+        private System.Windows.Forms.ListBox lBxLowStock;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
     }
 }

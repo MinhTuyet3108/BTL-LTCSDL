@@ -35,7 +35,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.lbRole = new System.Windows.Forms.Label();
             this.lbUsername = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
@@ -102,7 +101,6 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.lbRole);
             this.panel3.Controls.Add(this.lbUsername);
             this.panel3.Controls.Add(this.guna2CirclePictureBox1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
@@ -111,21 +109,12 @@
             this.panel3.Size = new System.Drawing.Size(228, 184);
             this.panel3.TabIndex = 3;
             // 
-            // lbRole
-            // 
-            this.lbRole.Location = new System.Drawing.Point(24, 153);
-            this.lbRole.Name = "lbRole";
-            this.lbRole.Size = new System.Drawing.Size(140, 24);
-            this.lbRole.TabIndex = 5;
-            this.lbRole.Text = "role";
-            this.lbRole.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // lbUsername
             // 
             this.lbUsername.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbUsername.Location = new System.Drawing.Point(24, 114);
+            this.lbUsername.Location = new System.Drawing.Point(7, 91);
             this.lbUsername.Name = "lbUsername";
-            this.lbUsername.Size = new System.Drawing.Size(140, 24);
+            this.lbUsername.Size = new System.Drawing.Size(215, 70);
             this.lbUsername.TabIndex = 5;
             this.lbUsername.Text = "Username";
             this.lbUsername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -165,6 +154,7 @@
             this.btnLogout.Text = "Logout";
             this.btnLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnLogout.TextOffset = new System.Drawing.Point(10, 0);
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // panel2
             // 
@@ -379,7 +369,6 @@
         private Guna.UI2.WinForms.Guna2Button btnClose;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
-        public System.Windows.Forms.Label lbRole;
         public System.Windows.Forms.Label lbUsername;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
         private Guna.UI2.WinForms.Guna2Button btnLogout;

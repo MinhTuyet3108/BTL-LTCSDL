@@ -1,0 +1,9 @@
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\DataLayer\bin\Debug\DataLayer.dll
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\DataLayer\bin\Debug\DataLayer.pdb
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\DataLayer\bin\Debug\TransObject.dll
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\DataLayer\bin\Debug\TransObject.pdb
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\DataLayer\obj\Debug\DataLayer.csproj.AssemblyReference.cache
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\DataLayer\obj\Debug\DataLayer.csproj.CoreCompileInputs.cache
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\DataLayer\obj\Debug\DataLayer.csproj.CopyComplete
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\DataLayer\obj\Debug\DataLayer.dll
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\DataLayer\obj\Debug\DataLayer.pdb

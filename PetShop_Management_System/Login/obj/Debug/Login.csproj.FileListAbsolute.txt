@@ -21,3 +21,9 @@ D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.Dashboar
 D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.ProductModule.resources
 D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.UserModule.resources
 D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.PetModule.resources
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\Login\bin\Debug\BusinessLayer.dll
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\Login\bin\Debug\TransObject.dll
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\Login\bin\Debug\DataLayer.dll
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\Login\bin\Debug\BusinessLayer.pdb
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\Login\bin\Debug\TransObject.pdb
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\Login\bin\Debug\DataLayer.pdb

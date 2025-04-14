@@ -141,6 +141,7 @@
             this.btForget.TabIndex = 10;
             this.btForget.Text = "Forget Password?";
             this.btForget.UseVisualStyleBackColor = true;
+            this.btForget.Click += new System.EventHandler(this.btForget_Click);
             // 
             // label6
             // 
@@ -218,6 +219,7 @@
             this.btLogin.TabIndex = 14;
             this.btLogin.Text = "Login";
             this.btLogin.UseVisualStyleBackColor = false;
+            this.btLogin.Click += new System.EventHandler(this.btLogin_Click);
             // 
             // LogForm
             // 
