@@ -1,0 +1,12 @@
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\TransObject\bin\Debug\TransObject.dll
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\TransObject\bin\Debug\TransObject.pdb
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\TransObject\obj\Debug\TransObject.csproj.AssemblyReference.cache
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\TransObject\obj\Debug\TransObject.csproj.CoreCompileInputs.cache
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\TransObject\obj\Debug\TransObject.dll
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\TransObject\obj\Debug\TransObject.pdb
+C:\Users\MINH TUYET\Videos\BTL-LTCSDL\PetShop_Management_System\TransObject\bin\Debug\TransObject.dll
+C:\Users\MINH TUYET\Videos\BTL-LTCSDL\PetShop_Management_System\TransObject\bin\Debug\TransObject.pdb
+C:\Users\MINH TUYET\Videos\BTL-LTCSDL\PetShop_Management_System\TransObject\obj\Debug\TransObject.csproj.AssemblyReference.cache
+C:\Users\MINH TUYET\Videos\BTL-LTCSDL\PetShop_Management_System\TransObject\obj\Debug\TransObject.csproj.CoreCompileInputs.cache
+C:\Users\MINH TUYET\Videos\BTL-LTCSDL\PetShop_Management_System\TransObject\obj\Debug\TransObject.dll
+C:\Users\MINH TUYET\Videos\BTL-LTCSDL\PetShop_Management_System\TransObject\obj\Debug\TransObject.pdb

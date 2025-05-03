@@ -1,0 +1,57 @@
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\Login\bin\Debug\Login.exe
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\Login\bin\Debug\Guna.UI2.dll
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\Login\bin\Debug\Login.exe.config
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.csproj.AssemblyReference.cache
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.csproj.SuggestedBindingRedirects.cache
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.Form1.resources
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.Home.resources
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.LogForm.resources
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.Properties.Resources.resources
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.csproj.GenerateResource.cache
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.csproj.CoreCompileInputs.cache
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.csproj.CopyComplete
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.exe
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.pdb
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\Login\bin\Debug\Login.pdb
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.CashCustomer.resources
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.CashForm.resources
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.CashProduct.resources
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.CustomerModule.resources
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.Dashboard.resources
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.ProductModule.resources
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.UserModule.resources
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.PetModule.resources
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\Login\bin\Debug\BusinessLayer.dll
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\Login\bin\Debug\TransObject.dll
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\Login\bin\Debug\DataLayer.dll
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\Login\bin\Debug\BusinessLayer.pdb
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\Login\bin\Debug\TransObject.pdb
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\Login\bin\Debug\DataLayer.pdb
+C:\Users\MINH TUYET\Videos\BTL-LTCSDL\PetShop_Management_System\Login\bin\Debug\Login.exe.config
+C:\Users\MINH TUYET\Videos\BTL-LTCSDL\PetShop_Management_System\Login\bin\Debug\Login.exe
+C:\Users\MINH TUYET\Videos\BTL-LTCSDL\PetShop_Management_System\Login\bin\Debug\Login.pdb
+C:\Users\MINH TUYET\Videos\BTL-LTCSDL\PetShop_Management_System\Login\bin\Debug\BusinessLayer.dll
+C:\Users\MINH TUYET\Videos\BTL-LTCSDL\PetShop_Management_System\Login\bin\Debug\Guna.UI2.dll
+C:\Users\MINH TUYET\Videos\BTL-LTCSDL\PetShop_Management_System\Login\bin\Debug\TransObject.dll
+C:\Users\MINH TUYET\Videos\BTL-LTCSDL\PetShop_Management_System\Login\bin\Debug\DataLayer.dll
+C:\Users\MINH TUYET\Videos\BTL-LTCSDL\PetShop_Management_System\Login\bin\Debug\BusinessLayer.pdb
+C:\Users\MINH TUYET\Videos\BTL-LTCSDL\PetShop_Management_System\Login\bin\Debug\TransObject.pdb
+C:\Users\MINH TUYET\Videos\BTL-LTCSDL\PetShop_Management_System\Login\bin\Debug\DataLayer.pdb
+C:\Users\MINH TUYET\Videos\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.csproj.AssemblyReference.cache
+C:\Users\MINH TUYET\Videos\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.CashCustomer.resources
+C:\Users\MINH TUYET\Videos\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.CashForm.resources
+C:\Users\MINH TUYET\Videos\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.CashProduct.resources
+C:\Users\MINH TUYET\Videos\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.CustomerModule.resources
+C:\Users\MINH TUYET\Videos\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.Dashboard.resources
+C:\Users\MINH TUYET\Videos\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.Form1.resources
+C:\Users\MINH TUYET\Videos\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.Home.resources
+C:\Users\MINH TUYET\Videos\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.LogForm.resources
+C:\Users\MINH TUYET\Videos\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.PetModule.resources
+C:\Users\MINH TUYET\Videos\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.ProductModule.resources
+C:\Users\MINH TUYET\Videos\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.Properties.Resources.resources
+C:\Users\MINH TUYET\Videos\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.UserModule.resources
+C:\Users\MINH TUYET\Videos\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.csproj.GenerateResource.cache
+C:\Users\MINH TUYET\Videos\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.csproj.CoreCompileInputs.cache
+C:\Users\MINH TUYET\Videos\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.csproj.Up2Date
+C:\Users\MINH TUYET\Videos\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.exe
+C:\Users\MINH TUYET\Videos\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.pdb

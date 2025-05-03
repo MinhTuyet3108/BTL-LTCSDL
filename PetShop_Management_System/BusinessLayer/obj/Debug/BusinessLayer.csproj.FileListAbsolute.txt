@@ -1,0 +1,22 @@
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\BusinessLayer\bin\Debug\BusinessLayer.dll
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\BusinessLayer\bin\Debug\BusinessLayer.pdb
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\BusinessLayer\bin\Debug\DataLayer.dll
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\BusinessLayer\bin\Debug\TransObject.dll
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\BusinessLayer\bin\Debug\DataLayer.pdb
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\BusinessLayer\bin\Debug\TransObject.pdb
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\BusinessLayer\obj\Debug\BusinessLayer.csproj.AssemblyReference.cache
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\BusinessLayer\obj\Debug\BusinessLayer.dll
+D:\HanhQuyen\BTL-LTCSDL\PetShop_Management_System\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\MINH TUYET\Videos\BTL-LTCSDL\PetShop_Management_System\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Users\MINH TUYET\Videos\BTL-LTCSDL\PetShop_Management_System\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\MINH TUYET\Videos\BTL-LTCSDL\PetShop_Management_System\BusinessLayer\bin\Debug\DataLayer.dll
+C:\Users\MINH TUYET\Videos\BTL-LTCSDL\PetShop_Management_System\BusinessLayer\bin\Debug\TransObject.dll
+C:\Users\MINH TUYET\Videos\BTL-LTCSDL\PetShop_Management_System\BusinessLayer\bin\Debug\DataLayer.pdb
+C:\Users\MINH TUYET\Videos\BTL-LTCSDL\PetShop_Management_System\BusinessLayer\bin\Debug\TransObject.pdb
+C:\Users\MINH TUYET\Videos\BTL-LTCSDL\PetShop_Management_System\BusinessLayer\obj\Debug\BusinessLayer.csproj.AssemblyReference.cache
+C:\Users\MINH TUYET\Videos\BTL-LTCSDL\PetShop_Management_System\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\MINH TUYET\Videos\BTL-LTCSDL\PetShop_Management_System\BusinessLayer\obj\Debug\Business.EA331CBA.Up2Date
+C:\Users\MINH TUYET\Videos\BTL-LTCSDL\PetShop_Management_System\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\MINH TUYET\Videos\BTL-LTCSDL\PetShop_Management_System\BusinessLayer\obj\Debug\BusinessLayer.pdb
