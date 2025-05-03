@@ -32,35 +32,28 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductModule));
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.txtStock = new System.Windows.Forms.TextBox();
             this.cbCategory = new System.Windows.Forms.ComboBox();
             this.lblPcode = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txttype = new System.Windows.Forms.TextBox();
-            this.txtQty = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblStock = new System.Windows.Forms.Label();
+            this.lblPrice = new System.Windows.Forms.Label();
+            this.txtPrName = new System.Windows.Forms.TextBox();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.lblCate = new System.Windows.Forms.Label();
+            this.lblID = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.dgvProduct = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             this.panel2.SuspendLayout();
@@ -72,12 +65,12 @@
             this.guna2Elipse1.BorderRadius = 15;
             this.guna2Elipse1.TargetControl = this;
             // 
-            // txtPrice
+            // txtStock
             // 
-            this.txtPrice.Location = new System.Drawing.Point(712, 533);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(394, 34);
-            this.txtPrice.TabIndex = 36;
+            this.txtStock.Location = new System.Drawing.Point(712, 533);
+            this.txtStock.Name = "txtStock";
+            this.txtStock.Size = new System.Drawing.Size(394, 30);
+            this.txtStock.TabIndex = 36;
             // 
             // cbCategory
             // 
@@ -85,13 +78,13 @@
             this.cbCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCategory.FormattingEnabled = true;
             this.cbCategory.Items.AddRange(new object[] {
-            "Dog",
-            "Cat",
-            "Fish",
-            "Food"});
+            "Chó",
+            "Mèo",
+            "Cá",
+            "Chim"});
             this.cbCategory.Location = new System.Drawing.Point(163, 530);
             this.cbCategory.Name = "cbCategory";
-            this.cbCategory.Size = new System.Drawing.Size(380, 33);
+            this.cbCategory.Size = new System.Drawing.Size(380, 29);
             this.cbCategory.TabIndex = 34;
             this.cbCategory.Tag = "1";
             // 
@@ -101,60 +94,60 @@
             this.lblPcode.AutoSize = true;
             this.lblPcode.Location = new System.Drawing.Point(12, 593);
             this.lblPcode.Name = "lblPcode";
-            this.lblPcode.Size = new System.Drawing.Size(84, 25);
+            this.lblPcode.Size = new System.Drawing.Size(72, 22);
             this.lblPcode.TabIndex = 48;
             this.lblPcode.Text = "pcode";
             this.lblPcode.Visible = false;
             // 
-            // label6
+            // lblStock
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(574, 533);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(76, 25);
-            this.label6.TabIndex = 47;
-            this.label6.Text = "Price :";
+            this.lblStock.AutoSize = true;
+            this.lblStock.Location = new System.Drawing.Point(574, 533);
+            this.lblStock.Name = "lblStock";
+            this.lblStock.Size = new System.Drawing.Size(70, 22);
+            this.lblStock.TabIndex = 47;
+            this.lblStock.Text = "Stock :";
             // 
-            // label5
+            // lblPrice
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(574, 483);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 25);
-            this.label5.TabIndex = 46;
-            this.label5.Text = "Qty :";
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.Location = new System.Drawing.Point(574, 483);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(64, 22);
+            this.lblPrice.TabIndex = 46;
+            this.lblPrice.Text = "Price :";
             // 
-            // txttype
+            // txtPrName
             // 
-            this.txttype.Location = new System.Drawing.Point(164, 477);
-            this.txttype.Name = "txttype";
-            this.txttype.Size = new System.Drawing.Size(380, 34);
-            this.txttype.TabIndex = 33;
+            this.txtPrName.Location = new System.Drawing.Point(164, 477);
+            this.txtPrName.Name = "txtPrName";
+            this.txtPrName.Size = new System.Drawing.Size(380, 30);
+            this.txtPrName.TabIndex = 33;
             // 
-            // txtQty
+            // txtPrice
             // 
-            this.txtQty.Location = new System.Drawing.Point(711, 480);
-            this.txtQty.Name = "txtQty";
-            this.txtQty.Size = new System.Drawing.Size(394, 34);
-            this.txtQty.TabIndex = 35;
+            this.txtPrice.Location = new System.Drawing.Point(711, 480);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(394, 30);
+            this.txtPrice.TabIndex = 35;
             // 
-            // label3
+            // lblCate
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(26, 530);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(128, 25);
-            this.label3.TabIndex = 44;
-            this.label3.Text = "Category :";
+            this.lblCate.AutoSize = true;
+            this.lblCate.Location = new System.Drawing.Point(26, 530);
+            this.lblCate.Name = "lblCate";
+            this.lblCate.Size = new System.Drawing.Size(109, 22);
+            this.lblCate.TabIndex = 44;
+            this.lblCate.Text = "Category :";
             // 
-            // label2
+            // lblID
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 430);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 25);
-            this.label2.TabIndex = 43;
-            this.label2.Text = "Name :";
+            this.lblID.AutoSize = true;
+            this.lblID.Location = new System.Drawing.Point(26, 430);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(112, 22);
+            this.lblID.TabIndex = 43;
+            this.lblID.Text = "ProductID :";
             // 
             // panel1
             // 
@@ -166,21 +159,33 @@
             this.panel1.Size = new System.Drawing.Size(1151, 53);
             this.panel1.TabIndex = 41;
             // 
-            // label4
+            // label7
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(26, 480);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 25);
-            this.label4.TabIndex = 45;
-            this.label4.Text = "Type :";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Schoolbook", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(400, 9);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(243, 32);
+            this.label7.TabIndex = 54;
+            this.label7.Text = "Product Module";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtName
+            // lblName
             // 
-            this.txtName.Location = new System.Drawing.Point(164, 427);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(380, 34);
-            this.txtName.TabIndex = 32;
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(26, 480);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(76, 22);
+            this.lblName.TabIndex = 45;
+            this.lblName.Text = "Name :";
+            // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(164, 427);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(380, 30);
+            this.txtID.TabIndex = 32;
             // 
             // btnCancel
             // 
@@ -195,12 +200,12 @@
             this.btnCancel.TabIndex = 51;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnUpdate
             // 
             this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(132)))), ((int)(((byte)(44)))));
-            this.btnUpdate.Enabled = false;
             this.btnUpdate.FlatAppearance.BorderSize = 0;
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
@@ -210,6 +215,7 @@
             this.btnUpdate.TabIndex = 50;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnSave
             // 
@@ -224,6 +230,7 @@
             this.btnSave.TabIndex = 49;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // dgvProduct
             // 
@@ -241,13 +248,6 @@
             this.dgvProduct.ColumnHeadersHeight = 30;
             this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvProduct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7,
             this.Edit,
             this.Delete});
             this.dgvProduct.EnableHeadersVisualStyles = false;
@@ -257,61 +257,7 @@
             this.dgvProduct.RowHeadersWidth = 62;
             this.dgvProduct.Size = new System.Drawing.Size(1151, 293);
             this.dgvProduct.TabIndex = 52;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column1.HeaderText = "No";
-            this.Column1.MinimumWidth = 8;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 76;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column2.HeaderText = "Pcode";
-            this.Column2.MinimumWidth = 8;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 116;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.HeaderText = "Name";
-            this.Column3.MinimumWidth = 8;
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column4.HeaderText = "Type";
-            this.Column4.MinimumWidth = 8;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 99;
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column5.HeaderText = "Category";
-            this.Column5.MinimumWidth = 8;
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 150;
-            // 
-            // Column6
-            // 
-            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column6.HeaderText = "Qty";
-            this.Column6.MinimumWidth = 8;
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 86;
-            // 
-            // Column7
-            // 
-            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column7.HeaderText = "Price";
-            this.Column7.MinimumWidth = 8;
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 98;
+            this.dgvProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellContentClick);
             // 
             // Edit
             // 
@@ -371,22 +317,11 @@
             this.txtSearch.SelectedText = "";
             this.txtSearch.Size = new System.Drawing.Size(666, 38);
             this.txtSearch.TabIndex = 0;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Schoolbook", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(400, 9);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(285, 37);
-            this.label7.TabIndex = 54;
-            this.label7.Text = "Product Module";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // ProductModule
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1151, 693);
@@ -394,23 +329,24 @@
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.txtPrice);
+            this.Controls.Add(this.txtStock);
             this.Controls.Add(this.cbCategory);
             this.Controls.Add(this.lblPcode);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.txttype);
-            this.Controls.Add(this.txtQty);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblStock);
+            this.Controls.Add(this.lblPrice);
+            this.Controls.Add(this.txtPrName);
+            this.Controls.Add(this.txtPrice);
+            this.Controls.Add(this.lblCate);
+            this.Controls.Add(this.lblID);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.lblName);
+            this.Controls.Add(this.txtID);
             this.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ProductModule";
             this.Text = "ProductModule";
+            this.Load += new System.EventHandler(this.ProductModule_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
@@ -424,34 +360,27 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        public System.Windows.Forms.TextBox txtPrice;
+        public System.Windows.Forms.TextBox txtStock;
         public System.Windows.Forms.ComboBox cbCategory;
         public System.Windows.Forms.Label lblPcode;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        public System.Windows.Forms.TextBox txttype;
-        public System.Windows.Forms.TextBox txtQty;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblStock;
+        private System.Windows.Forms.Label lblPrice;
+        public System.Windows.Forms.TextBox txtPrName;
+        public System.Windows.Forms.TextBox txtPrice;
+        private System.Windows.Forms.Label lblCate;
+        private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label4;
-        public System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.Label lblName;
+        public System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Button btnCancel;
         public System.Windows.Forms.Button btnUpdate;
         public System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dgvProduct;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewImageColumn Edit;
-        private System.Windows.Forms.DataGridViewImageColumn Delete;
         private System.Windows.Forms.Panel panel3;
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DataGridViewImageColumn Edit;
+        private System.Windows.Forms.DataGridViewImageColumn Delete;
     }
 }

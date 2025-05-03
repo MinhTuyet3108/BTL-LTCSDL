@@ -194,5 +194,10 @@ namespace Login
                 LoadSearchCustomer(result); // Dùng hàm riêng
             }
         }
+
+        private void dgvCustomer_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -44,8 +44,10 @@
     <Compile Include="Class1.cs" />
     <Compile Include="CustomerDL.cs" />
     <Compile Include="Dataprovider.cs" />
+    <Compile Include="EmployeeDL.cs" />
     <Compile Include="LoginDL.cs" />
     <Compile Include="PetReportDL.cs" />
+    <Compile Include="ProductDL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

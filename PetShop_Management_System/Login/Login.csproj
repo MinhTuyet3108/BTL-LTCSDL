@@ -114,11 +114,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserModel.cs">
+    <Compile Include="EmployeeModel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserModel.Designer.cs">
-      <DependentUpon>UserModel.cs</DependentUpon>
+    <Compile Include="EmployeeModel.Designer.cs">
+      <DependentUpon>EmployeeModel.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="CashCustomer.resx">
       <DependentUpon>CashCustomer.cs</DependentUpon>
@@ -162,8 +162,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UserModel.resx">
-      <DependentUpon>UserModel.cs</DependentUpon>
+    <EmbeddedResource Include="EmployeeModel.resx">
+      <DependentUpon>EmployeeModel.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -216,6 +216,12 @@
       <Project>{369b6213-f993-476c-90d9-9db8b5cc6e66}</Project>
       <Name>TransObject</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
