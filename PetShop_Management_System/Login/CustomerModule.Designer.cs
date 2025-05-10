@@ -422,11 +422,13 @@
             // btupdate
             // 
             this.btupdate.BackColor = System.Drawing.Color.SandyBrown;
-            this.btupdate.Location = new System.Drawing.Point(453, 616);
+            this.btupdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btupdate.ForeColor = System.Drawing.Color.White;
+            this.btupdate.Location = new System.Drawing.Point(454, 645);
             this.btupdate.Name = "btupdate";
             this.btupdate.Size = new System.Drawing.Size(159, 53);
             this.btupdate.TabIndex = 60;
-            this.btupdate.Text = "UPDATE";
+            this.btupdate.Text = "Update";
             this.btupdate.UseVisualStyleBackColor = false;
             this.btupdate.Click += new System.EventHandler(this.btupdate_Click);
             // 

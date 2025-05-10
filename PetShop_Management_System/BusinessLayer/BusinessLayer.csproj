@@ -41,10 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppointmentBL.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="CustomerBL.cs" />
     <Compile Include="EmployeeBL.cs" />
     <Compile Include="LoginBL.cs" />
+    <Compile Include="PermissionService.cs" />
     <Compile Include="PetReportBL.cs" />
     <Compile Include="ProductBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
