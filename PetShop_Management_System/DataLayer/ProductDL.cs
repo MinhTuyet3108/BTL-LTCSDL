@@ -67,7 +67,7 @@ namespace DataLayer
             }
             catch (SqlException ex)
             {
-                throw;
+                throw ex;
             }
             finally
             {

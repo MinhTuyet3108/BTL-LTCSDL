@@ -17,7 +17,7 @@ namespace BusinessLayer
         {
             loginDL = new LoginDL();
         }
-        public bool Login(Account account)
+        public string Login(Account account)
         {
             try
             {

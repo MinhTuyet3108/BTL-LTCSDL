@@ -32,7 +32,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -53,7 +52,6 @@
             this.panel1.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
@@ -78,53 +76,42 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Schoolbook", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(198, 418);
+            this.label5.Location = new System.Drawing.Point(214, 418);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(102, 24);
+            this.label5.Size = new System.Drawing.Size(90, 20);
             this.label5.TabIndex = 6;
             this.label5.Text = "Group 25";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Schoolbook", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(167, 381);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(133, 23);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Developed by";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Schoolbook", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Century Schoolbook", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(206, 247);
+            this.label3.Location = new System.Drawing.Point(112, 260);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 26);
+            this.label3.Size = new System.Drawing.Size(98, 27);
             this.label3.TabIndex = 5;
             this.label3.Text = "System";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Schoolbook", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Century Schoolbook", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(40, 205);
+            this.label2.Location = new System.Drawing.Point(23, 213);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(268, 26);
+            this.label2.Size = new System.Drawing.Size(281, 27);
             this.label2.TabIndex = 5;
             this.label2.Text = "Pet Shop Management";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Schoolbook", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Schoolbook", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(119, 163);
+            this.label1.Location = new System.Drawing.Point(62, 168);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(185, 26);
+            this.label1.Size = new System.Drawing.Size(195, 27);
             this.label1.TabIndex = 5;
             this.label1.Text = "Welcome to the";
             // 
@@ -148,9 +135,9 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Schoolbook", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
-            this.label6.Location = new System.Drawing.Point(326, 76);
+            this.label6.Location = new System.Drawing.Point(344, 58);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(388, 37);
+            this.label6.Size = new System.Drawing.Size(331, 32);
             this.label6.TabIndex = 12;
             this.label6.Text = "Login to your account";
             // 
@@ -176,7 +163,7 @@
             // 
             this.txtUsername.Location = new System.Drawing.Point(398, 180);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(390, 34);
+            this.txtUsername.Size = new System.Drawing.Size(390, 30);
             this.txtUsername.TabIndex = 13;
             // 
             // label7
@@ -186,7 +173,7 @@
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(346, 139);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(127, 26);
+            this.label7.Size = new System.Drawing.Size(111, 23);
             this.label7.TabIndex = 5;
             this.label7.Text = "Username";
             // 
@@ -197,7 +184,7 @@
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(346, 232);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(123, 26);
+            this.label8.Size = new System.Drawing.Size(108, 23);
             this.label8.TabIndex = 5;
             this.label8.Text = "Password";
             // 
@@ -205,7 +192,8 @@
             // 
             this.txtPass.Location = new System.Drawing.Point(398, 275);
             this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(390, 34);
+            this.txtPass.PasswordChar = '*';
+            this.txtPass.Size = new System.Drawing.Size(390, 30);
             this.txtPass.TabIndex = 13;
             // 
             // btLogin
@@ -223,7 +211,7 @@
             // 
             // LogForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(806, 450);
@@ -253,7 +241,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

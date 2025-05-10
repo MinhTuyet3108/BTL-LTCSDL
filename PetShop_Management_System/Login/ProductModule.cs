@@ -134,7 +134,7 @@ namespace Login
             }
         }
 
-        public void LoadSearcProduct(List<Product> products)
+        public void LoadSearchProduct(List<Product> products)
         {
             dgvProduct.DataSource = null; // reset lại
             dgvProduct.DataSource = products; // tự động binding dữ liệu
@@ -151,7 +151,7 @@ namespace Login
             else
             {
                 List<Product> result = productBL.SearchProducts(keyword);
-                LoadSearcProduct(result); //load danh sách sản phẩm đã tìm kiếm
+                LoadSearchProduct(result); //load danh sách sản phẩm đã tìm kiếm
             }
         }
 
@@ -190,3 +190,4 @@ namespace Login
         }
     }
 }
+               

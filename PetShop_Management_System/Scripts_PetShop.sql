@@ -87,7 +87,7 @@ GO
 
 --THÊM SẢN PHẨM
 CREATE PROC [dbo].[uspAddProduct]
-    @ProductID varchar(20),
+    @ProductID varchar(10),
 	@PrName nvarchar(100),
 	@Price decimal(18,2),
 	@Stock int,
@@ -105,7 +105,7 @@ GO
 
 --XÓA SẢN PHẨM
 CREATE PROC [dbo].[uspDeleteProduct]
-    @ProductID int
+    @ProductID varchar(10)
 AS 
 BEGIN
     SET NOCOUNT ON;
@@ -127,7 +127,7 @@ GO
 
 --CHỈNH SỬA SẢN PHẨM
 CREATE PROCEDURE [dbo].[uspUpdateProduct]
-	@ProductID int,
+	@ProductID varchar(10),
 	@PrName nvarchar(100),
 	@Price decimal(18,2),
 	@Stock int,
@@ -140,5 +140,90 @@ BEGIN
         Stock = @Stock,
         Category = @Category
     WHERE ProductID = @ProductID;
+END
+GO
+
+
+--LỊCH HẸN
+--LẤY DANH SÁCH LỊCH HẸN
+
+CREATE PROCEDURE [dbo].[uspGetAppointments]
+AS
+BEGIN
+SELECT
+a.AppointmentID,
+a.CustomerID,
+c.FirstName,
+a.AppointmentDate
+FROM
+Appointment a
+INNER JOIN
+Customer c ON a.CustomerID = c.CustomerID;
+END
+GO
+
+
+-- THÊM LỊCH HẸN
+CREATE PROCEDURE [dbo].[uspAddAppointment]
+@CustomerID NVARCHAR(50),
+@AppointmentDate DATETIME
+AS
+BEGIN
+SET NOCOUNT ON;
+-- Kiểm tra mã khách hàng có tồn tại trong bảng Customer không (phân biệt chữ thường và chữ in hoa)
+IF NOT EXISTS (
+    SELECT 1 FROM Customer WHERE CustomerID = @CustomerID COLLATE Latin1_General_CS_AS
+)
+BEGIN
+    RETURN -1; -- Trả về -1 nếu không tìm thấy khách hàng
+END
+
+-- Tự tạo AppointmentID mới (tăng dần)
+DECLARE @NextID INT;
+SELECT @NextID = ISNULL(MAX(AppointmentID), 0) + 1 FROM Appointment;
+
+-- Thêm lịch hẹn mới vào bảng Appointment
+INSERT INTO Appointment (AppointmentID, CustomerID, AppointmentDate)
+VALUES (@NextID, @CustomerID, @AppointmentDate);
+
+RETURN 0; -- Trả về 0 nếu thêm thành công
+END
+GO
+
+--XÓA LỊCH HẸN
+CREATE PROC [dbo].[uspDeleteAppointment]
+    @AppointmentID int
+AS 
+BEGIN
+    SET NOCOUNT ON;
+    DELETE FROM Appointment WHERE AppointmentID = @AppointmentID;
+END
+GO
+
+--SỬA LỊCH HẸN
+CREATE PROCEDURE [dbo].[uspUpdateAppointment]
+	@AppointmentID int,
+	@CustomerID varchar(10),
+	@AppointmentDate datetime
+AS
+BEGIN
+SET NOCOUNT ON;
+
+    UPDATE Appointment
+    SET CustomerID = @CustomerID,
+        AppointmentDate = @AppointmentDate
+
+    WHERE AppointmentID = @AppointmentID;
+END
+GO
+
+--TÌM KIẾM LỊCH HẸN
+CREATE PROCEDURE [dbo].[uspSearchAppointment]
+    @Keyword NVARCHAR(100)
+AS
+BEGIN
+    SELECT * FROM Appointment
+    WHERE CONCAT( AppointmentID, CustomerID, AppointmentDate) 
+          LIKE @Keyword
 END
 GO

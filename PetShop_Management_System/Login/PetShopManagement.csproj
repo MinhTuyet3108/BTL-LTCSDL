@@ -52,6 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppointmentModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppointmentModule.Designer.cs">
+      <DependentUpon>AppointmentModule.cs</DependentUpon>
+    </Compile>
     <Compile Include="CashCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     <Compile Include="EmployeeModel.Designer.cs">
       <DependentUpon>EmployeeModel.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AppointmentModule.resx">
+      <DependentUpon>AppointmentModule.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CashCustomer.resx">
       <DependentUpon>CashCustomer.cs</DependentUpon>
     </EmbeddedResource>

@@ -12,19 +12,18 @@ namespace DataLayer
 {
     public class LoginDL: Dataprovider
     {
-            public bool CheckLogin(Account account)
+            public string CheckLogin(Account account)
             {
                 try
                 {
                     Connect();
-                    string sql = "SELECT COUNT(*) FROM Employee WHERE Username = @Username AND Password = @Password";
+                    string sql = "SELECT Position FROM Employee WHERE Username = @Username AND Password = @Password";
                     SqlCommand cmd = new SqlCommand(sql, cn);
                     cmd.CommandType = CommandType.Text;
                     cmd.Parameters.AddWithValue("@Username", account.Username);
                     cmd.Parameters.AddWithValue("@Password", account.Password);
 
-                    int result = (int)cmd.ExecuteScalar();
-                    return result > 0;
+                    return cmd.ExecuteScalar().ToString();
                 }
                 catch (SqlException ex)
                 {
@@ -35,6 +34,7 @@ namespace DataLayer
                     Disconnect();
                 }
             }
+
         }
     }
 

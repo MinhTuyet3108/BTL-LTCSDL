@@ -23,16 +23,18 @@ namespace Login
 
              private void btLogin_Click(object sender, EventArgs e)
         {
+            LoginBL bus = new LoginBL();
             Account account = new Account(txtUsername.Text, txtPass.Text)
             {
                 Username = txtUsername.Text,
                 Password = txtPass.Text
             };
-            LoginBL bus = new LoginBL();
+            string position = bus.Login(account);
 
-            if (bus.Login(account))
+            if (!string.IsNullOrEmpty(position))
             {
-                Home main = new Home(account.Username);
+
+                Home main = new Home(account.Username, position);
                 this.Hide();
                 main.ShowDialog();
                 this.Close();
