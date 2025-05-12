@@ -48,13 +48,18 @@ namespace DataLayer
             }
 
         }
-        public object MyExcuteScalar(string sql, CommandType type)
+        public object MyExcuteScalar(string sql, CommandType type, List<SqlParameter> parameters = null)
         {
             try
             {
+
                 Connect();
                 SqlCommand cmd = new SqlCommand(sql, cn);
                 cmd.CommandType = type;
+                if (parameters != null)
+                {
+                    cmd.Parameters.AddRange(parameters.ToArray());
+                }
                 return (cmd.ExecuteScalar());
             }
             catch (SqlException ex)
@@ -67,12 +72,17 @@ namespace DataLayer
                 Disconnect();
             }
         }
-        public SqlDataReader MyExcuteReader(string sql, CommandType type)
+        public SqlDataReader MyExcuteReader(string sql, CommandType type, List<SqlParameter> parameters = null)
         {
             try
             {
                 SqlCommand cmd = new SqlCommand(sql, cn);
                 cmd.CommandType = type;
+                if (parameters != null)
+                {
+                    cmd.Parameters.AddRange(parameters.ToArray());
+
+                }
                 return cmd.ExecuteReader();
             }
             catch (SqlException ex)
@@ -81,6 +91,32 @@ namespace DataLayer
                 throw ex;
             }
         }
+        public int MyExecuteNonQuery(string sql, CommandType type, List<SqlParameter> parameters = null)
+        {
+            try
+            {
+                Connect();
+                SqlCommand cmd = new SqlCommand(sql, cn);
+                cmd.CommandType = type;
+                if (parameters != null)
+                {
+                    foreach (SqlParameter parameter in parameters)
+                    {
+                        cmd.Parameters.Add(parameter);
+                    }
+                }
 
+                return cmd.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                Disconnect();
+            }
+        }
     }
 }

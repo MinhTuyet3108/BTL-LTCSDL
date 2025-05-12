@@ -55,8 +55,17 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.lBxLowStock = new System.Windows.Forms.ListBox();
-            this.lBxPetVaccine = new System.Windows.Forms.ListBox();
+            this.lBxAppointment = new System.Windows.Forms.ListBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.dtpYear = new System.Windows.Forms.DateTimePicker();
+            this.dtpMonth = new System.Windows.Forms.DateTimePicker();
+            this.btnRevenueByYear = new System.Windows.Forms.Button();
+            this.dtpDay = new System.Windows.Forms.DateTimePicker();
+            this.lbTotalyear = new System.Windows.Forms.Label();
+            this.btnRevenueByMonth = new System.Windows.Forms.Button();
+            this.lbTotalmonth = new System.Windows.Forms.Label();
+            this.btnRevenueByDate = new System.Windows.Forms.Button();
             this.lbTotal = new System.Windows.Forms.Label();
             this.guna2GradientPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -69,6 +78,7 @@
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2GradientPanel4
@@ -321,7 +331,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Century Schoolbook", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(812, 38);
+            this.label3.Location = new System.Drawing.Point(767, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(285, 37);
             this.label3.TabIndex = 2;
@@ -333,7 +343,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Century Schoolbook", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(479, 33);
+            this.label9.Location = new System.Drawing.Point(285, 10);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(214, 37);
             this.label9.TabIndex = 2;
@@ -345,35 +355,36 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Century Schoolbook", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(63, 22);
+            this.label10.Location = new System.Drawing.Point(21, 9);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(191, 37);
             this.label10.TabIndex = 2;
             this.label10.Text = "Low Stock";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // lBxLowStock
             // 
             this.lBxLowStock.FormattingEnabled = true;
             this.lBxLowStock.ItemHeight = 25;
-            this.lBxLowStock.Location = new System.Drawing.Point(27, 73);
+            this.lBxLowStock.Location = new System.Drawing.Point(12, 62);
             this.lBxLowStock.Name = "lBxLowStock";
-            this.lBxLowStock.Size = new System.Drawing.Size(301, 129);
+            this.lBxLowStock.Size = new System.Drawing.Size(227, 179);
             this.lBxLowStock.TabIndex = 8;
             // 
-            // lBxPetVaccine
+            // lBxAppointment
             // 
-            this.lBxPetVaccine.FormattingEnabled = true;
-            this.lBxPetVaccine.ItemHeight = 25;
-            this.lBxPetVaccine.Location = new System.Drawing.Point(430, 73);
-            this.lBxPetVaccine.Name = "lBxPetVaccine";
-            this.lBxPetVaccine.Size = new System.Drawing.Size(301, 129);
-            this.lBxPetVaccine.TabIndex = 8;
+            this.lBxAppointment.FormattingEnabled = true;
+            this.lBxAppointment.ItemHeight = 25;
+            this.lBxAppointment.Location = new System.Drawing.Point(245, 62);
+            this.lBxAppointment.Name = "lBxAppointment";
+            this.lBxAppointment.Size = new System.Drawing.Size(275, 179);
+            this.lBxAppointment.TabIndex = 8;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.panel3.Controls.Add(this.lbTotal);
-            this.panel3.Controls.Add(this.lBxPetVaccine);
+            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Controls.Add(this.lBxAppointment);
             this.panel3.Controls.Add(this.lBxLowStock);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label9);
@@ -383,16 +394,112 @@
             this.panel3.Size = new System.Drawing.Size(1148, 248);
             this.panel3.TabIndex = 12;
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.PowderBlue;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel4.Controls.Add(this.dtpYear);
+            this.panel4.Controls.Add(this.dtpMonth);
+            this.panel4.Controls.Add(this.btnRevenueByYear);
+            this.panel4.Controls.Add(this.dtpDay);
+            this.panel4.Controls.Add(this.lbTotalyear);
+            this.panel4.Controls.Add(this.btnRevenueByMonth);
+            this.panel4.Controls.Add(this.lbTotalmonth);
+            this.panel4.Controls.Add(this.btnRevenueByDate);
+            this.panel4.Controls.Add(this.lbTotal);
+            this.panel4.Location = new System.Drawing.Point(526, 49);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(619, 196);
+            this.panel4.TabIndex = 9;
+            // 
+            // dtpYear
+            // 
+            this.dtpYear.Location = new System.Drawing.Point(427, 12);
+            this.dtpYear.Name = "dtpYear";
+            this.dtpYear.Size = new System.Drawing.Size(180, 34);
+            this.dtpYear.TabIndex = 9;
+            // 
+            // dtpMonth
+            // 
+            this.dtpMonth.Location = new System.Drawing.Point(221, 12);
+            this.dtpMonth.Name = "dtpMonth";
+            this.dtpMonth.Size = new System.Drawing.Size(180, 34);
+            this.dtpMonth.TabIndex = 9;
+            // 
+            // btnRevenueByYear
+            // 
+            this.btnRevenueByYear.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRevenueByYear.Location = new System.Drawing.Point(435, 69);
+            this.btnRevenueByYear.Name = "btnRevenueByYear";
+            this.btnRevenueByYear.Size = new System.Drawing.Size(165, 50);
+            this.btnRevenueByYear.TabIndex = 8;
+            this.btnRevenueByYear.Text = "Year";
+            this.btnRevenueByYear.UseVisualStyleBackColor = true;
+            this.btnRevenueByYear.Click += new System.EventHandler(this.btnRevenueByYear_Click);
+            // 
+            // dtpDay
+            // 
+            this.dtpDay.Location = new System.Drawing.Point(15, 12);
+            this.dtpDay.Name = "dtpDay";
+            this.dtpDay.Size = new System.Drawing.Size(180, 34);
+            this.dtpDay.TabIndex = 9;
+            // 
+            // lbTotalyear
+            // 
+            this.lbTotalyear.BackColor = System.Drawing.Color.White;
+            this.lbTotalyear.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTotalyear.ForeColor = System.Drawing.Color.Black;
+            this.lbTotalyear.Location = new System.Drawing.Point(424, 142);
+            this.lbTotalyear.Name = "lbTotalyear";
+            this.lbTotalyear.Size = new System.Drawing.Size(186, 48);
+            this.lbTotalyear.TabIndex = 7;
+            this.lbTotalyear.Text = "0.00000000";
+            this.lbTotalyear.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnRevenueByMonth
+            // 
+            this.btnRevenueByMonth.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRevenueByMonth.Location = new System.Drawing.Point(229, 69);
+            this.btnRevenueByMonth.Name = "btnRevenueByMonth";
+            this.btnRevenueByMonth.Size = new System.Drawing.Size(165, 50);
+            this.btnRevenueByMonth.TabIndex = 8;
+            this.btnRevenueByMonth.Text = "Month";
+            this.btnRevenueByMonth.UseVisualStyleBackColor = true;
+            this.btnRevenueByMonth.Click += new System.EventHandler(this.btnRevenueByMonth_Click);
+            // 
+            // lbTotalmonth
+            // 
+            this.lbTotalmonth.BackColor = System.Drawing.Color.White;
+            this.lbTotalmonth.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTotalmonth.ForeColor = System.Drawing.Color.Black;
+            this.lbTotalmonth.Location = new System.Drawing.Point(218, 142);
+            this.lbTotalmonth.Name = "lbTotalmonth";
+            this.lbTotalmonth.Size = new System.Drawing.Size(186, 48);
+            this.lbTotalmonth.TabIndex = 7;
+            this.lbTotalmonth.Text = "0.00000000";
+            this.lbTotalmonth.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnRevenueByDate
+            // 
+            this.btnRevenueByDate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRevenueByDate.Location = new System.Drawing.Point(23, 69);
+            this.btnRevenueByDate.Name = "btnRevenueByDate";
+            this.btnRevenueByDate.Size = new System.Drawing.Size(165, 50);
+            this.btnRevenueByDate.TabIndex = 8;
+            this.btnRevenueByDate.Text = "Day";
+            this.btnRevenueByDate.UseVisualStyleBackColor = true;
+            this.btnRevenueByDate.Click += new System.EventHandler(this.btnRevenueByDate_Click);
+            // 
             // lbTotal
             // 
             this.lbTotal.BackColor = System.Drawing.Color.White;
-            this.lbTotal.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTotal.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTotal.ForeColor = System.Drawing.Color.Black;
-            this.lbTotal.Location = new System.Drawing.Point(821, 115);
+            this.lbTotal.Location = new System.Drawing.Point(12, 142);
             this.lbTotal.Name = "lbTotal";
-            this.lbTotal.Size = new System.Drawing.Size(276, 79);
+            this.lbTotal.Size = new System.Drawing.Size(186, 48);
             this.lbTotal.TabIndex = 7;
-            this.lbTotal.Text = "0.000000000000";
+            this.lbTotal.Text = "0.00000000";
             this.lbTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Dashboard
@@ -428,6 +535,7 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -457,10 +565,19 @@
         private System.Windows.Forms.PageSetupDialog pageSetupDialog1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lbTotal;
-        private System.Windows.Forms.ListBox lBxPetVaccine;
+        private System.Windows.Forms.ListBox lBxAppointment;
         private System.Windows.Forms.ListBox lBxLowStock;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.DateTimePicker dtpYear;
+        private System.Windows.Forms.DateTimePicker dtpMonth;
+        private System.Windows.Forms.Button btnRevenueByYear;
+        private System.Windows.Forms.DateTimePicker dtpDay;
+        private System.Windows.Forms.Label lbTotalyear;
+        private System.Windows.Forms.Button btnRevenueByMonth;
+        private System.Windows.Forms.Label lbTotalmonth;
+        private System.Windows.Forms.Button btnRevenueByDate;
     }
 }

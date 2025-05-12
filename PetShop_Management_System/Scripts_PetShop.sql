@@ -87,6 +87,7 @@ GO
 
 --THÊM SẢN PHẨM
 CREATE PROC [dbo].[uspAddProduct]
+    @ProductID varchar(20),
     @ProductID varchar(10),
 	@PrName nvarchar(100),
 	@Price decimal(18,2),
@@ -127,6 +128,7 @@ GO
 
 --CHỈNH SỬA SẢN PHẨM
 CREATE PROCEDURE [dbo].[uspUpdateProduct]
+	@ProductID int,
 	@ProductID varchar(10),
 	@PrName nvarchar(100),
 	@Price decimal(18,2),
@@ -146,7 +148,6 @@ GO
 
 --LỊCH HẸN
 --LẤY DANH SÁCH LỊCH HẸN
-
 CREATE PROCEDURE [dbo].[uspGetAppointments]
 AS
 BEGIN
@@ -162,11 +163,10 @@ Customer c ON a.CustomerID = c.CustomerID;
 END
 GO
 
-
 -- THÊM LỊCH HẸN
 CREATE PROCEDURE [dbo].[uspAddAppointment]
-@CustomerID NVARCHAR(50),
-@AppointmentDate DATETIME
+    @CustomerID NVARCHAR(50),
+    @AppointmentDate DATETIME
 AS
 BEGIN
 SET NOCOUNT ON;
@@ -175,9 +175,9 @@ IF NOT EXISTS (
     SELECT 1 FROM Customer WHERE CustomerID = @CustomerID COLLATE Latin1_General_CS_AS
 )
 BEGIN
+
     RETURN -1; -- Trả về -1 nếu không tìm thấy khách hàng
 END
-
 -- Tự tạo AppointmentID mới (tăng dần)
 DECLARE @NextID INT;
 SELECT @NextID = ISNULL(MAX(AppointmentID), 0) + 1 FROM Appointment;
@@ -193,8 +193,11 @@ GO
 --XÓA LỊCH HẸN
 CREATE PROC [dbo].[uspDeleteAppointment]
     @AppointmentID int
-AS 
+AS
 BEGIN
+    SELECT SUM(TotalAmount) AS TotalRevenue
+    FROM Invoice
+    WHERE MONTH(InvoiceDate) = @Month AND YEAR(InvoiceDate) = @Year
     SET NOCOUNT ON;
     DELETE FROM Appointment WHERE AppointmentID = @AppointmentID;
 END
@@ -207,6 +210,9 @@ CREATE PROCEDURE [dbo].[uspUpdateAppointment]
 	@AppointmentDate datetime
 AS
 BEGIN
+    SELECT SUM(TotalAmount) AS TotalRevenue
+    FROM Invoice
+    WHERE YEAR(InvoiceDate) = @Year
 SET NOCOUNT ON;
 
     UPDATE Appointment
@@ -222,8 +228,196 @@ CREATE PROCEDURE [dbo].[uspSearchAppointment]
     @Keyword NVARCHAR(100)
 AS
 BEGIN
+    SELECT a.AppointmentID, a.CustomerID, a.AppointmentDate
+    FROM Appointment a
+    WHERE DATEDIFF(HOUR, GETDATE(), a.AppointmentDate) BETWEEN 0 AND 24
+    ORDER BY a.AppointmentDate
     SELECT * FROM Appointment
     WHERE CONCAT( AppointmentID, CustomerID, AppointmentDate) 
           LIKE @Keyword
 END
 GO
+
+-- CUSTOMER VÀ DASHBOARD
+
+-- Lấy tất cả khách hàng
+CREATE PROCEDURE uspGetAllCustomers
+AS
+BEGIN
+    SELECT * FROM Customer
+END
+GO
+-- Thêm khách hàng
+CREATE PROCEDURE uspAddCustomer
+    @CustomerID NVARCHAR(10),
+    @LastName NVARCHAR(50),
+    @FirstName NVARCHAR(50),
+    @Gender NVARCHAR(10),
+    @Phone NVARCHAR(15),
+    @Address NVARCHAR(100),
+    @Email NVARCHAR(100)
+AS
+BEGIN
+    INSERT INTO Customer (CustomerID, LastName, FirstName, Gender, Phone, Address, Email)
+    VALUES (@CustomerID, @LastName, @FirstName, @Gender, @Phone, @Address, @Email)
+END
+GO
+
+-- Cập nhật thông tin khách hàng
+CREATE PROCEDURE uspUpdateCustomer
+    @CustomerID NVARCHAR(10),
+    @LastName NVARCHAR(50),
+    @FirstName NVARCHAR(50),
+    @Gender NVARCHAR(10),
+    @Phone NVARCHAR(15),
+    @Address NVARCHAR(100),
+    @Email NVARCHAR(100)
+AS
+BEGIN
+    UPDATE Customer SET 
+        LastName = @LastName,
+        FirstName = @FirstName,
+        Gender = @Gender,
+        Phone = @Phone,
+        Address = @Address,
+        Email = @Email
+    WHERE CustomerID = @CustomerID
+END
+GO
+
+-- Xóa khách hàng
+CREATE PROCEDURE uspDeleteCustomer
+    @CustomerID NVARCHAR(10)
+
+AS
+BEGIN
+    DELETE FROM Customer WHERE CustomerID = @CustomerID
+END
+GO
+
+
+-- Tìm kiếm khách hàng
+CREATE PROCEDURE uspSearchCustomers
+    @Keyword NVARCHAR(100)
+AS
+BEGIN
+    SELECT * FROM Customer
+    WHERE CustomerID LIKE @Keyword
+       OR LastName LIKE @Keyword
+       OR FirstName LIKE @Keyword
+       OR Gender LIKE @Keyword
+       OR Phone LIKE @Keyword
+       OR Address LIKE @Keyword
+       OR Email LIKE @Keyword
+END
+GO
+
+-- Lấy số lượng thú cưng theo loại.
+--Create Proc uspGetPetTypeQT
+--AS
+--BEGIN
+--    SELECT LOWER(LTRIM(RTRIM(Category))) AS Category, SUM(Qty) AS TotalQty 
+--    FROM Pet 
+--    WHERE CustomerID IS NULL AND Qty > 0
+--    GROUP BY LOWER(LTRIM(RTRIM(Category)))
+--END
+--GO
+
+Create Proc uspGetPetTypeQT
+AS
+BEGIN
+    SELECT 
+        LoaiThuCung,
+        COUNT(*) AS SoLuong
+    FROM (
+        SELECT 
+            LEFT(Type, CHARINDEX(' ', Type + ' ') - 1) AS LoaiThuCung
+        FROM Pet
+        WHERE CustomerID IS NULL  -- Lọc thú cưng chưa bán
+    ) AS Thucung
+    WHERE LoaiThuCung IN (N'Chó', N'Mèo', N'Cá', N'Chim')
+    GROUP BY LoaiThuCung
+END;
+GO
+-- Lấy danh sách sản phẩm tồn kho thấp
+CREATE PROCEDURE uspGetLowStockProducts
+AS
+BEGIN
+    SELECT PrName FROM Product WHERE Stock <= 5
+END
+GO
+
+---- SP: Tính doanh thu hôm nay
+--CREATE PROCEDURE uspGetTodayRevenue
+--AS
+--BEGIN
+--    SELECT SUM(TotalAmount) AS Revenue 
+--    FROM Invoice 
+--    WHERE CONVERT(date, InvoiceDate) = CONVERT(date, GETDATE())
+--END
+--GO
+----SP: TÍnh doanh thu tháng
+--CREATE PROCEDURE uspGetRevenueByMonth
+--    @Month INT,
+--    @Year INT
+--AS
+--BEGIN
+--    SELECT ISNULL(SUM(TotalAmount), 0) AS Revenue
+--    FROM Invoice
+--    WHERE MONTH(InvoiceDate) = @Month AND YEAR(InvoiceDate) = @Year
+--END
+--GO
+----SP: Tính doanh thu năm
+--CREATE PROCEDURE uspGetRevenueByYear
+--    @Year INT
+--AS
+--BEGIN
+--    SELECT ISNULL(SUM(TotalAmount), 0) AS Revenue
+--    FROM Invoice
+--    WHERE YEAR(InvoiceDate) = @Year
+--END
+--GO
+
+--SP: Doanh thu theo ngày
+CREATE PROC uspGetRevenueByDate
+    @Date DATE
+AS
+BEGIN
+    SELECT SUM(TotalAmount) AS TotalRevenue
+    FROM Invoice
+    WHERE CAST(InvoiceDate AS DATE) = @Date
+END
+GO
+--SP: Doanh thu theo tháng
+CREATE PROC uspGetRevenueByMonth
+    @Month INT,
+    @Year INT
+AS
+BEGIN
+    SELECT SUM(TotalAmount) AS TotalRevenue
+    FROM Invoice
+    WHERE MONTH(InvoiceDate) = @Month AND YEAR(InvoiceDate) = @Year
+END
+GO
+
+--SP: Doanh thu theo năm
+CREATE PROC uspGetRevenueByYear
+    @Year INT
+AS
+BEGIN
+    SELECT SUM(TotalAmount) AS TotalRevenue
+    FROM Invoice
+    WHERE YEAR(InvoiceDate) = @Year
+END
+GO
+
+
+--SP: Lịch hẹn sắp đến
+CREATE PROCEDURE uspGetUpcomingAppointments
+AS
+BEGIN
+    SELECT a.AppointmentID, a.CustomerID, a.AppointmentDate
+    FROM Appointment a
+    WHERE DATEDIFF(HOUR, GETDATE(), a.AppointmentDate) BETWEEN 0 AND 24
+    ORDER BY a.AppointmentDate
+END

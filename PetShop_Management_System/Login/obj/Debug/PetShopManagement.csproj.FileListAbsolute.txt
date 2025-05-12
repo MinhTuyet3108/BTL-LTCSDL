@@ -27,3 +27,32 @@ C:\Users\MINH TUYET\Videos\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\
 C:\Users\MINH TUYET\Videos\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.exe
 C:\Users\MINH TUYET\Videos\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.pdb
 C:\Users\MINH TUYET\Videos\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.AppointmentModule.resources
+D:\BTL-LTCSDL\PetShop_Management_System\Login\bin\Debug\Login.exe.config
+D:\BTL-LTCSDL\PetShop_Management_System\Login\bin\Debug\Login.exe
+D:\BTL-LTCSDL\PetShop_Management_System\Login\bin\Debug\Login.pdb
+D:\BTL-LTCSDL\PetShop_Management_System\Login\bin\Debug\BusinessLayer.dll
+D:\BTL-LTCSDL\PetShop_Management_System\Login\bin\Debug\Guna.UI2.dll
+D:\BTL-LTCSDL\PetShop_Management_System\Login\bin\Debug\TransObject.dll
+D:\BTL-LTCSDL\PetShop_Management_System\Login\bin\Debug\DataLayer.dll
+D:\BTL-LTCSDL\PetShop_Management_System\Login\bin\Debug\BusinessLayer.pdb
+D:\BTL-LTCSDL\PetShop_Management_System\Login\bin\Debug\TransObject.pdb
+D:\BTL-LTCSDL\PetShop_Management_System\Login\bin\Debug\DataLayer.pdb
+D:\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\PetShopManagement.csproj.AssemblyReference.cache
+D:\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.AppointmentModule.resources
+D:\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.CashCustomer.resources
+D:\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.CashForm.resources
+D:\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.CashProduct.resources
+D:\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.CustomerModule.resources
+D:\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.Dashboard.resources
+D:\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.Form1.resources
+D:\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.Home.resources
+D:\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.LogForm.resources
+D:\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.PetModule.resources
+D:\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.ProductModule.resources
+D:\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.Properties.Resources.resources
+D:\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.UserModule.resources
+D:\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\PetShopManagement.csproj.GenerateResource.cache
+D:\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\PetShopManagement.csproj.CoreCompileInputs.cache
+D:\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\PetShopM.0603202C.Up2Date
+D:\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.exe
+D:\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.pdb

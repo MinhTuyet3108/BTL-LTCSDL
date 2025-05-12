@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -14,21 +15,16 @@ namespace DataLayer
         public Dictionary<string, int> GetPetTypeQuantities()
         {
             Dictionary<string, int> result = new Dictionary<string, int>();
-            string sql = @"SELECT LOWER(LTRIM(RTRIM(Category))) AS Category, SUM(Qty) AS TotalQty 
-    FROM Pet 
-    WHERE CustomerID IS NULL AND Qty > 0
-    GROUP BY LOWER(LTRIM(RTRIM(Category)))";
+
 
             try
             {
                 Connect();
-                SqlCommand cmd = new SqlCommand(sql, cn);
-                SqlDataReader reader = cmd.ExecuteReader();
-
+                SqlDataReader reader = MyExcuteReader("uspGetPetTypeQT", CommandType.StoredProcedure);
                 while (reader.Read())
                 {
-                    string category = reader["Category"].ToString();
-                    int qty = Convert.ToInt32(reader["TotalQty"]);
+                    string category = reader["LoaiThuCung"].ToString();
+                    int qty = Convert.ToInt32(reader["SoLuong"]);
                     result[category] = qty;
                 }
 
@@ -48,13 +44,12 @@ namespace DataLayer
         public List<string> GetLowStockProducts()
         {
             List<string> list = new List<string>();
-            string sql = "SELECT PrName FROM Product WHERE Stock <= 5";
 
             try
             {
                 Connect();
-                SqlCommand cmd = new SqlCommand(sql, cn);
-                SqlDataReader reader = cmd.ExecuteReader();
+                SqlDataReader reader = MyExcuteReader("uspGetLowStockProducts", CommandType.StoredProcedure);
+
 
                 while (reader.Read())
                 {
@@ -74,33 +69,107 @@ namespace DataLayer
             }
         }
 
-        public decimal GetTodayRevenue()
-        {
-            decimal total = 0;
-            string sql = @"
-            SELECT SUM(TotalAmount) AS Revenue 
-            FROM Invoice 
-            WHERE CONVERT(date, InvoiceDate) = CONVERT(date, GETDATE())";
+        //public decimal GetTodayRevenue()
+        //{
+        //    decimal total = 0;
 
+        //    try
+        //    {
+        //        Connect();
+        //        object result = MyExcuteScalar("uspGetTodayRevenue", CommandType.StoredProcedure);
+
+        //        if (result != DBNull.Value)
+        //            total = Convert.ToDecimal(result);
+
+        //        return total;
+        //    }
+        //    catch (SqlException ex)
+        //    {
+        //        throw ex;
+        //    }
+        //    finally
+        //    {
+        //        Disconnect();
+        //    }
+        //}
+
+        public decimal GetRevenueBytDate(DateTime date)
+        {
             try
             {
-                Connect();
-                SqlCommand cmd = new SqlCommand(sql, cn);
-                object result = cmd.ExecuteScalar();
+                var parameters = new List<SqlParameter>
+        {
+            new SqlParameter("@Date", date.Date)
+        };
 
-                if (result != DBNull.Value)
-                    total = Convert.ToDecimal(result);
-
-                return total;
+                var result = MyExcuteScalar("uspGetRevenueByDate", CommandType.StoredProcedure, parameters);
+                return result != DBNull.Value ? Convert.ToDecimal(result) : 0;
             }
             catch (SqlException ex)
             {
+                // Ghi log lỗi nếu cần: Console.WriteLine(ex.Message);
                 throw ex;
             }
-            finally
+        }
+
+        public decimal GetRevenueByMonth(int month, int year)
+        {
+            try
             {
-                Disconnect();
+                var parameters = new List<SqlParameter>
+        {
+            new SqlParameter("@Month", month),
+            new SqlParameter("@Year", year)
+        };
+
+                var result = MyExcuteScalar("uspGetRevenueByMonth", CommandType.StoredProcedure, parameters);
+                return result != DBNull.Value ? Convert.ToDecimal(result) : 0;
+            }
+            catch (SqlException ex)
+            {
+                // Ghi log lỗi nếu cần: Console.WriteLine(ex.Message);
+                throw ex;
             }
         }
+
+        public decimal GetRevenueByYear(int year)
+        {
+            try
+            {
+                var parameters = new List<SqlParameter>
+        {
+            new SqlParameter("@Year", year)
+        };
+
+                var result = MyExcuteScalar("uspGetRevenueByYear", CommandType.StoredProcedure, parameters);
+                return result != DBNull.Value ? Convert.ToDecimal(result) : 0;
+            }
+            catch (SqlException ex)
+            {
+                // Ghi log lỗi nếu cần: Console.WriteLine(ex.Message);
+                throw ex;
+            }
+        }
+
+        public List<Appointment> GetUpcomingAppointments()
+        {
+            List<Appointment> list = new List<Appointment>();
+            Connect();
+            List<SqlParameter> parameters = null;
+            SqlDataReader reader = MyExcuteReader("uspGetUpcomingAppointments", CommandType.StoredProcedure, parameters);
+            while (reader.Read())
+            {
+                list.Add(new Appointment
+                {
+                    AppointmentID = Convert.ToInt32(reader["AppointmentID"]),
+                    CustomerID = reader["CustomerID"].ToString(),
+                    AppointmentDate = Convert.ToDateTime(reader["AppointmentDate"])
+                });
+            }
+            reader.Close();
+            Disconnect();
+            return list;
+        }
+
     }
 }
