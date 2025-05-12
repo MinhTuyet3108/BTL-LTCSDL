@@ -25,3 +25,12 @@ D:\BTL-LTCSDL\PetShop_Management_System\DataLayer\obj\Debug\DataLayer.csproj.Cor
 D:\BTL-LTCSDL\PetShop_Management_System\DataLayer\obj\Debug\DataLayer.csproj.Up2Date
 D:\BTL-LTCSDL\PetShop_Management_System\DataLayer\obj\Debug\DataLayer.dll
 D:\BTL-LTCSDL\PetShop_Management_System\DataLayer\obj\Debug\DataLayer.pdb
+C:\BTL-LTCSDL\PetShop_Management_System\DataLayer\bin\Debug\DataLayer.dll
+C:\BTL-LTCSDL\PetShop_Management_System\DataLayer\bin\Debug\DataLayer.pdb
+C:\BTL-LTCSDL\PetShop_Management_System\DataLayer\bin\Debug\TransObject.dll
+C:\BTL-LTCSDL\PetShop_Management_System\DataLayer\bin\Debug\TransObject.pdb
+C:\BTL-LTCSDL\PetShop_Management_System\DataLayer\obj\Debug\DataLayer.csproj.AssemblyReference.cache
+C:\BTL-LTCSDL\PetShop_Management_System\DataLayer\obj\Debug\DataLayer.csproj.CoreCompileInputs.cache
+C:\BTL-LTCSDL\PetShop_Management_System\DataLayer\obj\Debug\DataLayer.csproj.Up2Date
+C:\BTL-LTCSDL\PetShop_Management_System\DataLayer\obj\Debug\DataLayer.dll
+C:\BTL-LTCSDL\PetShop_Management_System\DataLayer\obj\Debug\DataLayer.pdb

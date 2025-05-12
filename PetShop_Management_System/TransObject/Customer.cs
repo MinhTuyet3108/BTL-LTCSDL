@@ -8,6 +8,8 @@ namespace TransObject
 {
     public class Customer
     {
+        private string cid;
+
         public string CustomerID { get; set; }
         public string LastName { get; set; }
         public string FirstName { get; set; }
@@ -28,5 +30,13 @@ namespace TransObject
         }
 
         public Customer() { }
+
+        public Customer(string cid, string lastName, string firstName, string phone)
+        {
+            this.cid = cid;
+            LastName = lastName;
+            FirstName = firstName;
+            Phone = phone;
+        }
     }
 }
