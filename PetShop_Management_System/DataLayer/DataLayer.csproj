@@ -42,11 +42,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppointmentDL.cs" />
+    <Compile Include="CashCustomerDL.cs" />
+    <Compile Include="CashDL.cs" />
+    <Compile Include="CashProductDL.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="CustomerDL.cs" />
     <Compile Include="Dataprovider.cs" />
     <Compile Include="EmployeeDL.cs" />
     <Compile Include="LoginDL.cs" />
+    <Compile Include="PetDL.cs" />
     <Compile Include="PetReportDL.cs" />
     <Compile Include="ProductDL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

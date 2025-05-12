@@ -421,3 +421,222 @@ BEGIN
     WHERE DATEDIFF(HOUR, GETDATE(), a.AppointmentDate) BETWEEN 0 AND 24
     ORDER BY a.AppointmentDate
 END
+GO
+---//----
+--THÚ CƯNG
+--LẤY DANH SÁCH THÚ CƯNG
+ALTER PROCEDURE [dbo].[uspGetPet]
+AS
+BEGIN
+    SELECT * FROM Pet;
+END
+GO
+--THÊM SẢN PHẨM
+CREATE PROCEDURE [dbo].[uspAddPet]
+	@PetName nvarchar(50),
+    @Type nvarchar(50),
+	@Price decimal(10,2),
+	@HealthStatus nvarchar(100),
+	@CustomerID varchar(10)
+AS 
+BEGIN
+    INSERT INTO Pet(PetName, Type, Price, HealthStatus, CustomerID)
+    VALUES (@PetName, @Type, @Price, @HealthStatus, @CustomerID)
+END
+GO
+
+
+--XÓA SẢN PHẨM
+ALTER PROCEDURE uspDeletePet
+    @PetID int
+AS
+BEGIN
+    SET NOCOUNT ON; 
+    DELETE FROM Pet
+    WHERE PetID = @PetID;
+END
+GO
+
+
+--TÌM KIẾM SẢN PHẨM
+CREATE PROCEDURE [dbo].[uspSearchPet]
+    @Keyword NVARCHAR(100)
+AS
+BEGIN
+    SELECT * FROM Pet
+    WHERE CONCAT( petName,type, price, healthStatus) 
+          LIKE @Keyword
+END
+GO
+
+--CHỈNH SỬA SẢN PHẨM
+CREATE PROCEDURE [dbo].[uspUpdatePet]
+	
+    @PetID INT,
+    @PetName NVARCHAR(50),
+    @Type NVARCHAR(50),
+    @Price DECIMAL(10,2),
+    @HealthStatus NVARCHAR(100),
+    @CustomerID VARCHAR(10) = NULL -- cho phép NULL nếu chưa bán
+AS
+BEGIN
+    UPDATE  Pet
+    SET 
+        PetName = @PetName,
+        Type = @Type,
+        Price = @Price,
+        HealthStatus = @HealthStatus,
+        CustomerID = @CustomerID
+    WHERE PetID = @PetID;
+END
+GO
+
+--//--
+---THANH TOAN---
+CREATE PROCEDURE uspGetCash
+AS
+BEGIN
+    SELECT CashID, Transno, Pcode, Pname, Qty, Price, Total, Cid, Cashier
+    FROM Cash
+END
+GO
+
+-- Thêm giao dịch
+CREATE PROCEDURE [dbo].[uspAddCash]
+  @Transno VARCHAR(15),
+    @Pcode VARCHAR(10),
+    @Pname NVARCHAR(50),
+    @Qty INT,
+    @Price DECIMAL(18, 2),
+    @Total DECIMAL(18, 2),
+    @Cid VARCHAR(10),
+    @Cashier VARCHAR(10)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    -- Khai báo biến bảng để lưu giá trị sequence
+    DECLARE @SequenceValueTable TABLE (Value INT);
+
+    -- Khai báo biến để lưu CashID và SequenceValue
+    DECLARE @NewCashID VARCHAR(10);
+    DECLARE @SequenceValue INT;
+
+    BEGIN TRANSACTION;
+
+    -- Tăng giá trị sequence và lưu vào biến bảng
+    UPDATE SequenceGenerator
+    SET CurrentValue = CurrentValue + 1
+    OUTPUT INSERTED.CurrentValue INTO @SequenceValueTable
+    WHERE SequenceName = 'CashID';
+
+    -- Lấy giá trị từ biến bảng
+    SELECT @SequenceValue = Value
+    FROM @SequenceValueTable;
+
+    -- Định dạng CashID (CASH001, CASH002, ...)
+    SET @NewCashID = 'CASH' + RIGHT('000' + CAST(@SequenceValue AS VARCHAR(3)), 3);
+
+    -- Thêm giao dịch vào bảng Cash
+    INSERT INTO Cash (CashID, Transno, Pcode, Pname, Qty, Price, Total, Cid, Cashier)
+    VALUES (@NewCashID, @Transno, @Pcode, @Pname, @Qty, @Price, @Total, @Cid, @Cashier);
+
+    COMMIT TRANSACTION;
+END
+GO 
+
+-- Cập nhật giao dịch
+CREATE PROCEDURE [dbo].[uspUpdateCash]
+    @CashID VARCHAR(10),
+    @Transno VARCHAR(15),
+    @Pcode VARCHAR(15),
+    @Pname VARCHAR(50),
+    @Qty INT,
+    @Price DECIMAL(18,2),
+    @Total DECIMAL(18,2),
+    @Cid VARCHAR(10),
+    @Cashier VARCHAR(10)
+AS
+BEGIN
+    UPDATE Cash
+    SET Transno = @Transno,
+        Pcode = @Pcode,
+        Pname = @Pname,
+        Qty = @Qty,
+        Price = @Price,
+        Total = @Total,
+        Cid = @Cid,
+        Cashier = @Cashier
+    WHERE CashID = @CashID;
+END
+GO
+
+-- Xóa giao dịch
+CREATE PROCEDURE [dbo].[uspDeleteCash]
+    @CashID VARCHAR(10)
+AS
+BEGIN
+    SET NOCOUNT ON;
+    DELETE FROM Cash WHERE CashID = @CashID;
+END
+GO
+
+-- Tìm kiếm giao dịch
+CREATE PROCEDURE [dbo].[uspSearchCash]
+    @Keyword NVARCHAR(100)
+AS
+BEGIN
+    SELECT CashID, Transno, Pcode, Pname, Qty, Price, Total, Cid, Cashier
+    FROM Cash
+    WHERE CONCAT(CashID, Transno, Pcode, Pname, Qty, Price, Total, Cid, Cashier) LIKE '%' + @Keyword + '%';
+END
+GO
+
+---///----
+CREATE TABLE SequenceGenerator
+(
+    SequenceName VARCHAR(50) PRIMARY KEY,
+    CurrentValue INT NOT NULL DEFAULT 0
+);
+GO
+
+-- Thêm giá trị ban đầu cho CashID
+INSERT INTO SequenceGenerator (SequenceName, CurrentValue)
+VALUES ('CashID', 0);
+GO
+
+ALTER PROCEDURE uspAddCash
+    @Transno VARCHAR(15),
+    @Pcode VARCHAR(10),
+    @Pname NVARCHAR(50),
+    @Qty INT,
+    @Price DECIMAL(18, 2),
+    @Total DECIMAL(18, 2),
+    @Cid VARCHAR(10),
+    @Cashier VARCHAR(10)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    -- Tăng giá trị sequence và lấy giá trị mới
+    DECLARE @NewCashID VARCHAR(10);
+    DECLARE @SequenceValue INT;
+
+    BEGIN TRANSACTION;
+
+    UPDATE SequenceGenerator
+    SET CurrentValue = CurrentValue + 1
+    OUTPUT INSERTED.CurrentValue INTO @SequenceValue
+    WHERE SequenceName = 'CashID';
+
+    -- Định dạng CashID (CASH001, CASH002, ...)
+    SET @NewCashID = 'CASH' + RIGHT('000' + CAST(@SequenceValue AS VARCHAR(3)), 3);
+
+    -- Thêm giao dịch vào bảng Cash
+    INSERT INTO Cash (CashID, Transno, Pcode, Pname, Qty, Price, Total, Cid, Cashier)
+    VALUES (@NewCashID, @Transno, @Pcode, @Pname, @Qty, @Price, @Total, @Cid, @Cashier);
+
+    COMMIT TRANSACTION;
+END
+GO
+
