@@ -15,7 +15,7 @@ namespace BusinessLayer
         private CustomerDL customerDL;
         public CustomerBL()
         {
-            customerDL=new CustomerDL();
+            customerDL = new CustomerDL();
         }
         public List<Customer> GetCustomers()
         {
@@ -41,7 +41,7 @@ namespace BusinessLayer
 
                 throw ex;
             }
-        
+
         }
         public bool DeleteCustomer(string id)
         {
@@ -54,7 +54,7 @@ namespace BusinessLayer
 
                 throw ex;
             }
-          
+
         }
 
         public bool UpdateCustomer(Customer c)
@@ -68,7 +68,7 @@ namespace BusinessLayer
 
                 throw ex;
             }
-            
+
         }
 
 

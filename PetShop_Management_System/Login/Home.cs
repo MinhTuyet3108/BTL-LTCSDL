@@ -27,7 +27,7 @@ namespace Login
         private Form activeForm = null;
 
 
-        private void OpenChildForm(Form childForm)
+    private void OpenChildForm(Form childForm)
     {
         if (activeForm != null)
             activeForm.Close();
@@ -59,6 +59,7 @@ namespace Login
         {
             this.Close();
 
+            
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -97,7 +98,7 @@ namespace Login
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            OpenChildForm(new CashForm());
+                OpenChildForm(new CashForm());
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)

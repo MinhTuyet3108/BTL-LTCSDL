@@ -15,38 +15,78 @@ namespace Login
 {
     public partial class Dashboard : Form
     {
+        private PetReportBL petReportBL;
         public Dashboard()
         {
             InitializeComponent();
-         
-        }
-        PetReportBL petReportBL = new PetReportBL();
+            petReportBL = new PetReportBL();
 
+        }
 
         private void LoadPetCounts()
         {
-            var counts = petReportBL.GetPetCounts();
+            try
+            {
+                var counts = petReportBL.GetPetCounts();
 
-            lblDog.Text = counts.ContainsKey("chó") ? counts["chó"].ToString() : "0";
-            lbCat.Text = counts.ContainsKey("mèo") ? counts["mèo"].ToString() : "0";
-            lblFish.Text = counts.ContainsKey("cá") ? counts["cá"].ToString() : "0";
-            lbBird.Text = counts.ContainsKey("chim") ? counts["chim"].ToString() : "0";
+                lblDog.Text = counts.ContainsKey("Chó") ? counts["Chó"].ToString() : "0";
+                lbCat.Text = counts.ContainsKey("Mèo") ? counts["Mèo"].ToString() : "0";
+                lblFish.Text = counts.ContainsKey("Cá") ? counts["Cá"].ToString() : "0";
+                lbBird.Text = counts.ContainsKey("Chim") ? counts["Chim"].ToString() : "0";
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Lỗi tải số lượng thú cưng: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void LoadLowStockProducts()
         {
-            PetReportBL reportBL = new PetReportBL();
-            List<string> products = reportBL.GetLowStockProducts();
-            lBxLowStock.Items.Clear();
-            foreach (string item in products)
+            try
             {
-                lBxLowStock.Items.Add(item);
+                List<string> products = petReportBL.GetLowStockProducts();
+                lBxLowStock.Items.Clear();
+                foreach (string item in products)
+                {
+                    lBxLowStock.Items.Add(item);
+                }
             }
+            catch (SqlException ex)
+            {
+
+                MessageBox.Show("Lỗi tải sản phẩm tồn kho thấp: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
         }
-        private void LoadTodayRevenue()
+        //private void LoadTodayRevenue()
+        //{
+        //    try
+        //    {
+        //        decimal total = petReportBL.GetTodayRevenue();
+        //        lbTotal.Text = total.ToString("N0") + " VND";
+        //    }
+        //    catch (SqlException ex)
+        //    {
+        //        MessageBox.Show("Lỗi SQL khi tải doanh thu hôm nay: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //}
+
+
+        private void LoadUpcomingAppointments()
         {
-            PetReportBL revenueBL = new PetReportBL();
-            decimal total = revenueBL.GetTodayRevenue();
-            lbTotal.Text = total.ToString("N0") + " VND";
+            try
+            {
+                var list = petReportBL.GetUpcomingAppointments();
+                lBxAppointment.Items.Clear();
+                foreach (var appt in list)
+                {
+                    lBxAppointment.Items.Add($"KH: {appt.CustomerID} - {appt.AppointmentDate:g}");
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Lỗi tải lịch hẹn: " + ex.Message);
+            }
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
@@ -72,7 +112,67 @@ namespace Login
         {
             LoadPetCounts();
             LoadLowStockProducts();
-            LoadTodayRevenue();
+            //LoadTodayRevenue();
+            LoadUpcomingAppointments();
+            dtpDay.Format = DateTimePickerFormat.Short;
+
+            // Chọn tháng + năm (ẩn ngày)
+            dtpMonth.Format = DateTimePickerFormat.Custom;
+            dtpMonth.CustomFormat = "MM/yyyy";
+            dtpMonth.ShowUpDown = true;
+
+            // Chọn chỉ năm (ẩn ngày, tháng)
+            dtpYear.Format = DateTimePickerFormat.Custom;
+            dtpYear.CustomFormat = "yyyy";
+            dtpYear.ShowUpDown = true;
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRevenueByDate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DateTime date = dtpDay.Value;
+                decimal revenue = petReportBL.GetRevenueByDate(date);
+                lbTotal.Text = revenue.ToString("N0");
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+        }
+
+        private void btnRevenueByMonth_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int selectmonth = dtpMonth.Value.Month;
+                int selectyear = dtpMonth.Value.Year;
+                decimal revenue = petReportBL.GetRevenueByMonth(selectmonth, selectyear);
+                lbTotalmonth.Text = revenue.ToString("N0");
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+        }
+
+        private void btnRevenueByYear_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int year = dtpYear.Value.Year;
+                decimal revenue = petReportBL.GetRevenueByYear(year);
+                lbTotalyear.Text = revenue.ToString("N0");
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
         }
     }
 }
