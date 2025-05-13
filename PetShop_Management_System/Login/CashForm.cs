@@ -38,8 +38,14 @@ namespace Login
             LoadCash();
             _currentTransno = getTransno(); // Gán giá trị ban đầu
             lblTransno.Text = _currentTransno;
-            dgvCash.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCash_CellContentClick);
+            //dgvCash.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCash_CellContentClick);
             printDocument.PrintPage += new PrintPageEventHandler(PrintDocument_PrintPage); // Gán sự kiện in
+
+            // Đảm bảo cột Date được định dạng
+            if (dgvCash.Columns.Contains("Date"))
+            {
+                dgvCash.Columns["Date"].DefaultCellStyle.Format = "dd/MM/yyyy";
+            }
         }
 
         private void LoadCash()
@@ -192,6 +198,8 @@ namespace Login
                         item.CashID = GenerateCashID();
                     if (string.IsNullOrEmpty(item.Cashier))
                         item.Cashier = "Nhân viên bán hàng";
+                    if (item.Date == default(DateTime)) // Kiểm tra nếu Date chưa được gán
+                        item.Date = DateTime.Now; // Gán ngày giờ hiện tại
 
                     cart.Add(item);
                 }
@@ -273,7 +281,10 @@ namespace Login
                     Pname = productName,
                     Qty = 1, // Giá trị mặc định
                     Price = price,
-                    Total = price // Tổng ban đầu bằng giá
+                    Total = price, // Tổng ban đầu bằng giá
+                    Date = DateTime.Now
+
+
                 };
 
                 if (string.IsNullOrEmpty(item.CashID))

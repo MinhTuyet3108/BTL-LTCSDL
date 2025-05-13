@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 using System.Data;
 namespace DataLayer
 {
-   public class CashDL : Dataprovider
+    public class CashDL : Dataprovider
     {
         public List<Cash> GetCash()
         {
@@ -31,8 +31,10 @@ namespace DataLayer
                     int qty = Convert.ToInt32(reader["Qty"]);
                     string cid = reader["Cid"].ToString();
                     string cashier = reader["Cashier"].ToString();
+                    DateTime date = Convert.ToDateTime(reader["Date"]);
 
-                    Cash cash = new Cash(cashID, transno, pcode, pname, qty, price, total, cid, cashier);
+
+                    Cash cash = new Cash(cashID, transno, pcode, pname, qty, price, total, cid, cashier, date);
                     cashes.Add(cash);
                 }
                 reader.Close();
@@ -72,6 +74,8 @@ namespace DataLayer
                     cmd.Parameters.Add(new SqlParameter("@Total", SqlDbType.Decimal) { Value = (object)cash.Total ?? DBNull.Value, Precision = 18, Scale = 2 });
                     cmd.Parameters.Add(new SqlParameter("@Cid", SqlDbType.VarChar, 10) { Value = (object)cash.Cid ?? DBNull.Value });
                     cmd.Parameters.Add(new SqlParameter("@Cashier", SqlDbType.VarChar, 10) { Value = (object)cash.Cashier ?? DBNull.Value });
+                    cmd.Parameters.AddWithValue("@DateTime", DateTime.Now);
+
 
                     int result = cmd.ExecuteNonQuery();
                     return result > 0;
@@ -131,6 +135,7 @@ namespace DataLayer
                 cmd.Parameters.AddWithValue("@Qty", cash.Qty);
                 cmd.Parameters.AddWithValue("@Cid", cash.Cid);
                 cmd.Parameters.AddWithValue("@Cashier", cash.Cashier);
+                cmd.Parameters.AddWithValue("@DateTime", cash.Date);
 
 
                 int result = cmd.ExecuteNonQuery();
@@ -145,47 +150,6 @@ namespace DataLayer
                 Disconnect();
             }
         }
-
-        public List<Cash> Search(string keyword)
-        {
-            List<Cash> cashes = new List<Cash>();
-
-            try
-            {
-                Connect();
-                SqlCommand cmd = new SqlCommand("uspSearchCash", cn);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Keyword", "%" + keyword + "%");
-
-                SqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    string cashID = reader["CashID"].ToString();
-                    string transno = reader["Transno"].ToString();
-                    string pcode = reader["Pcode"].ToString();
-                    string pname = reader["Pname"].ToString();
-                    decimal price = Convert.ToDecimal(reader["Price"]);
-                    decimal total = Convert.ToDecimal(reader["Total"]);
-                    int qty = Convert.ToInt32(reader["Qty"]);
-                    string cid = reader["Cid"].ToString();
-                    string cashier = reader["Cashier"].ToString();
-
-                    Cash cash = new Cash(cashID, transno, pcode, pname, qty, price, total, cid, cashier);
-                    cashes.Add(cash);
-                }
-                reader.Close();
-                return cashes;
-            }
-            catch (SqlException ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                Disconnect();
-            }
-        }
-
 
 
     }

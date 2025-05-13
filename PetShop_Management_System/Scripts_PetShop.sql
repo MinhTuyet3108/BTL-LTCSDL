@@ -87,9 +87,8 @@ GO
 
 --THÊM SẢN PHẨM
 CREATE PROC [dbo].[uspAddProduct]
-    @ProductID varchar(20),
     @ProductID varchar(10),
-	@PrName nvarchar(100),
+	@PrName nvarchar(50),
 	@Price decimal(18,2),
 	@Stock int,
 	@Category nvarchar(100)
@@ -128,9 +127,8 @@ GO
 
 --CHỈNH SỬA SẢN PHẨM
 CREATE PROCEDURE [dbo].[uspUpdateProduct]
-	@ProductID int,
 	@ProductID varchar(10),
-	@PrName nvarchar(100),
+	@PrName nvarchar(50),
 	@Price decimal(18,2),
 	@Stock int,
 	@Category nvarchar(100)
@@ -195,9 +193,6 @@ CREATE PROC [dbo].[uspDeleteAppointment]
     @AppointmentID int
 AS
 BEGIN
-    SELECT SUM(TotalAmount) AS TotalRevenue
-    FROM Invoice
-    WHERE MONTH(InvoiceDate) = @Month AND YEAR(InvoiceDate) = @Year
     SET NOCOUNT ON;
     DELETE FROM Appointment WHERE AppointmentID = @AppointmentID;
 END
@@ -210,9 +205,6 @@ CREATE PROCEDURE [dbo].[uspUpdateAppointment]
 	@AppointmentDate datetime
 AS
 BEGIN
-    SELECT SUM(TotalAmount) AS TotalRevenue
-    FROM Invoice
-    WHERE YEAR(InvoiceDate) = @Year
 SET NOCOUNT ON;
 
     UPDATE Appointment
@@ -228,10 +220,6 @@ CREATE PROCEDURE [dbo].[uspSearchAppointment]
     @Keyword NVARCHAR(100)
 AS
 BEGIN
-    SELECT a.AppointmentID, a.CustomerID, a.AppointmentDate
-    FROM Appointment a
-    WHERE DATEDIFF(HOUR, GETDATE(), a.AppointmentDate) BETWEEN 0 AND 24
-    ORDER BY a.AppointmentDate
     SELECT * FROM Appointment
     WHERE CONCAT( AppointmentID, CustomerID, AppointmentDate) 
           LIKE @Keyword
@@ -312,17 +300,8 @@ BEGIN
 END
 GO
 
+--Dashboard
 -- Lấy số lượng thú cưng theo loại.
---Create Proc uspGetPetTypeQT
---AS
---BEGIN
---    SELECT LOWER(LTRIM(RTRIM(Category))) AS Category, SUM(Qty) AS TotalQty 
---    FROM Pet 
---    WHERE CustomerID IS NULL AND Qty > 0
---    GROUP BY LOWER(LTRIM(RTRIM(Category)))
---END
---GO
-
 Create Proc uspGetPetTypeQT
 AS
 BEGIN
@@ -347,56 +326,30 @@ BEGIN
 END
 GO
 
----- SP: Tính doanh thu hôm nay
---CREATE PROCEDURE uspGetTodayRevenue
---AS
---BEGIN
---    SELECT SUM(TotalAmount) AS Revenue 
---    FROM Invoice 
---    WHERE CONVERT(date, InvoiceDate) = CONVERT(date, GETDATE())
---END
---GO
-----SP: TÍnh doanh thu tháng
---CREATE PROCEDURE uspGetRevenueByMonth
---    @Month INT,
---    @Year INT
---AS
---BEGIN
---    SELECT ISNULL(SUM(TotalAmount), 0) AS Revenue
---    FROM Invoice
---    WHERE MONTH(InvoiceDate) = @Month AND YEAR(InvoiceDate) = @Year
---END
---GO
-----SP: Tính doanh thu năm
---CREATE PROCEDURE uspGetRevenueByYear
---    @Year INT
---AS
---BEGIN
---    SELECT ISNULL(SUM(TotalAmount), 0) AS Revenue
---    FROM Invoice
---    WHERE YEAR(InvoiceDate) = @Year
---END
---GO
-
 --SP: Doanh thu theo ngày
 CREATE PROC uspGetRevenueByDate
     @Date DATE
 AS
 BEGIN
-    SELECT SUM(TotalAmount) AS TotalRevenue
-    FROM Invoice
-    WHERE CAST(InvoiceDate AS DATE) = @Date
+    SET NOCOUNT ON;
+
+    SELECT SUM(Total) AS TotalRevenue
+    FROM Cash
+    WHERE CAST(Date AS DATE) = @Date;
 END
 GO
+
 --SP: Doanh thu theo tháng
 CREATE PROC uspGetRevenueByMonth
     @Month INT,
     @Year INT
 AS
 BEGIN
-    SELECT SUM(TotalAmount) AS TotalRevenue
-    FROM Invoice
-    WHERE MONTH(InvoiceDate) = @Month AND YEAR(InvoiceDate) = @Year
+    SET NOCOUNT ON;
+
+    SELECT SUM(Total) AS TotalRevenue
+    FROM Cash
+    WHERE MONTH(Date) = @Month AND YEAR(Date) = @Year;
 END
 GO
 
@@ -405,9 +358,11 @@ CREATE PROC uspGetRevenueByYear
     @Year INT
 AS
 BEGIN
-    SELECT SUM(TotalAmount) AS TotalRevenue
-    FROM Invoice
-    WHERE YEAR(InvoiceDate) = @Year
+    SET NOCOUNT ON;
+
+    SELECT SUM(Total) AS TotalRevenue
+    FROM Cash
+    WHERE YEAR(Date) = @Year;
 END
 GO
 
@@ -496,7 +451,7 @@ GO
 CREATE PROCEDURE uspGetCash
 AS
 BEGIN
-    SELECT CashID, Transno, Pcode, Pname, Qty, Price, Total, Cid, Cashier
+    SELECT CashID, Transno, Pcode, Pname, Qty, Price, Total, Cid, Cashier, Date
     FROM Cash
 END
 GO
@@ -510,7 +465,8 @@ CREATE PROCEDURE [dbo].[uspAddCash]
     @Price DECIMAL(18, 2),
     @Total DECIMAL(18, 2),
     @Cid VARCHAR(10),
-    @Cashier VARCHAR(10)
+    @Cashier VARCHAR(10),
+    @DateTime DATETIME
 AS
 BEGIN
     SET NOCOUNT ON;
@@ -538,8 +494,8 @@ BEGIN
     SET @NewCashID = 'CASH' + RIGHT('000' + CAST(@SequenceValue AS VARCHAR(3)), 3);
 
     -- Thêm giao dịch vào bảng Cash
-    INSERT INTO Cash (CashID, Transno, Pcode, Pname, Qty, Price, Total, Cid, Cashier)
-    VALUES (@NewCashID, @Transno, @Pcode, @Pname, @Qty, @Price, @Total, @Cid, @Cashier);
+    INSERT INTO Cash (CashID, Transno, Pcode, Pname, Qty, Price, Total, Cid, Cashier, Date)
+    VALUES (@NewCashID, @Transno, @Pcode, @Pname, @Qty, @Price, @Total, @Cid, @Cashier, @DateTime);
 
     COMMIT TRANSACTION;
 END
@@ -555,7 +511,8 @@ CREATE PROCEDURE [dbo].[uspUpdateCash]
     @Price DECIMAL(18,2),
     @Total DECIMAL(18,2),
     @Cid VARCHAR(10),
-    @Cashier VARCHAR(10)
+    @Cashier VARCHAR(10),
+    @DateTime DATETIME
 AS
 BEGIN
     UPDATE Cash
@@ -566,7 +523,8 @@ BEGIN
         Price = @Price,
         Total = @Total,
         Cid = @Cid,
-        Cashier = @Cashier
+        Cashier = @Cashier,
+        Date = @DateTime
     WHERE CashID = @CashID;
 END
 GO
@@ -581,16 +539,6 @@ BEGIN
 END
 GO
 
--- Tìm kiếm giao dịch
-CREATE PROCEDURE [dbo].[uspSearchCash]
-    @Keyword NVARCHAR(100)
-AS
-BEGIN
-    SELECT CashID, Transno, Pcode, Pname, Qty, Price, Total, Cid, Cashier
-    FROM Cash
-    WHERE CONCAT(CashID, Transno, Pcode, Pname, Qty, Price, Total, Cid, Cashier) LIKE '%' + @Keyword + '%';
-END
-GO
 
 ---///----
 CREATE TABLE SequenceGenerator
@@ -605,6 +553,7 @@ INSERT INTO SequenceGenerator (SequenceName, CurrentValue)
 VALUES ('CashID', 0);
 GO
 
+
 ALTER PROCEDURE uspAddCash
     @Transno VARCHAR(20),
     @Pcode VARCHAR(10),
@@ -613,7 +562,8 @@ ALTER PROCEDURE uspAddCash
     @Price DECIMAL(18, 2),
     @Total DECIMAL(18, 2),
     @Cid VARCHAR(10),
-    @Cashier VARCHAR(10)
+    @Cashier VARCHAR(10),
+    @DateTime DATETIME
 AS
 BEGIN
     SET NOCOUNT ON;
@@ -633,8 +583,8 @@ BEGIN
     SET @NewCashID = 'CASH' + RIGHT('000' + CAST(@SequenceValue AS VARCHAR(3)), 3);
 
     -- Thêm giao dịch vào bảng Cash
-    INSERT INTO Cash (CashID, Transno, Pcode, Pname, Qty, Price, Total, Cid, Cashier)
-    VALUES (@NewCashID, @Transno, @Pcode, @Pname, @Qty, @Price, @Total, @Cid, @Cashier);
+    INSERT INTO Cash (CashID, Transno, Pcode, Pname, Qty, Price, Total, Cid, Cashier, Date)
+    VALUES (@NewCashID, @Transno, @Pcode, @Pname, @Qty, @Price, @Total, @Cid, @Cashier, @DateTime);
 
     COMMIT TRANSACTION;
 END

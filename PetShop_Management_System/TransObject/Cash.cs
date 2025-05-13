@@ -17,13 +17,16 @@ namespace TransObject
         public decimal Total { get; set; }
         public string Cid { get; set; }
         public string Cashier { get; set; }
+
+        public DateTime Date { get; set; }
+
         public int No { get; set; }
         public string CustomerName { get; set; }
         public int Stock { get; set; }
         public string Category { get; set; }
 
         public Cash() { }
-        public Cash(string cashID, string transno, string pcode, string pname, int qty, decimal price, decimal total, string cid, string cashier)
+        public Cash(string cashID, string transno, string pcode, string pname, int qty, decimal price, decimal total, string cid, string cashier, DateTime date)
         {
             CashID = cashID;
             Transno = transno;
@@ -34,6 +37,8 @@ namespace TransObject
             Total = total;
             Cid = cid;
             Cashier = cashier;
+            Date = date;
+
 
         }
 
