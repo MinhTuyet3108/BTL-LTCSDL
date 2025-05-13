@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessLayer;
+using Guna.UI2.WinForms;
 using TransObject;
 
 namespace Login
@@ -122,6 +123,72 @@ namespace Login
             {
                 List<Product> result = productBL.SearchProducts(keyword);
                 //SearcProduct(result); //load danh sách sản phẩm đã tìm kiếm
+            }
+        }
+        public void LoadSearchProduct(List<Product> products)
+        {
+            try
+            {
+                dgvProduct.DataSource = null;
+                dgvProduct.Columns.Clear();
+
+                if (products != null && products.Any())
+                {
+                    dgvProduct.DataSource = products;
+
+                    // Gán lại header
+                    dgvProduct.Columns["ProductID"].HeaderText = "Mã SP";
+                    dgvProduct.Columns["PrName"].HeaderText = "Tên sản phẩm";
+                    dgvProduct.Columns["Price"].HeaderText = "Giá";
+                    dgvProduct.Columns["Stock"].HeaderText = "Tồn kho";
+                    dgvProduct.Columns["Category"].HeaderText = "Danh mục";
+
+                    // Thêm cột checkbox "Select"
+                    if (!dgvProduct.Columns.Contains("Select"))
+                    {
+                        DataGridViewCheckBoxColumn chk = new DataGridViewCheckBoxColumn();
+                        chk.HeaderText = "Chọn";
+                        chk.Name = "Select";
+                        chk.Width = 50;
+                        dgvProduct.Columns.Insert(0, chk);
+                    }
+
+                    // Thêm cột nút "Edit"
+                    if (!dgvProduct.Columns.Contains("Edit"))
+                    {
+                        DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
+                        btn.HeaderText = "Chỉnh sửa";
+                        btn.Text = "Chỉnh sửa";
+                        btn.Name = "Edit";
+                        btn.UseColumnTextForButtonValue = true;
+                        dgvProduct.Columns.Add(btn);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi hiển thị kết quả tìm kiếm: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void txtSearchCashProduct_TextChanged_1(object sender, EventArgs e)
+        {
+            try
+            {
+                string keyword = txtSearchCashProduct.Text.Trim(); // Sử dụng tên đúng của TextBox
+                if (string.IsNullOrEmpty(keyword))
+                {
+                    LoadProduct();
+                }
+                else
+                {
+                    List<Product> result = cashProductBL.SearchProducts(keyword);
+                    LoadSearchProduct(result);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi tìm kiếm: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

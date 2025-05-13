@@ -13,7 +13,7 @@ namespace BusinessLayer
     public class LoginBL
     {
         private LoginDL loginDL;
-        public  LoginBL()
+        public LoginBL()
         {
             loginDL = new LoginDL();
         }

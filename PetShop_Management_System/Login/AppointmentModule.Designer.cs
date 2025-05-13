@@ -68,7 +68,7 @@
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtSearch.IconLeft")));
-            this.txtSearch.Location = new System.Drawing.Point(54, 6);
+            this.txtSearch.Location = new System.Drawing.Point(90, 6);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PlaceholderText = "Search here";
@@ -79,15 +79,19 @@
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.dgvAppointment);
-            this.panel2.Location = new System.Drawing.Point(-28, 85);
+            this.panel2.Location = new System.Drawing.Point(2, 115);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1170, 353);
+            this.panel2.Size = new System.Drawing.Size(1189, 419);
             this.panel2.TabIndex = 69;
             // 
             // dgvAppointment
             // 
             this.dgvAppointment.AllowUserToAddRows = false;
+            this.dgvAppointment.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvAppointment.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvAppointment.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvAppointment.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -105,12 +109,13 @@
             this.Edit,
             this.Delete});
             this.dgvAppointment.EnableHeadersVisualStyles = false;
-            this.dgvAppointment.Location = new System.Drawing.Point(28, 57);
+            this.dgvAppointment.Location = new System.Drawing.Point(0, 0);
             this.dgvAppointment.Name = "dgvAppointment";
             this.dgvAppointment.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dgvAppointment.RowHeadersVisible = false;
             this.dgvAppointment.RowHeadersWidth = 62;
-            this.dgvAppointment.Size = new System.Drawing.Size(1337, 293);
+            this.dgvAppointment.Size = new System.Drawing.Size(1186, 416);
+            this.dgvAppointment.StandardTab = true;
             this.dgvAppointment.TabIndex = 52;
             this.dgvAppointment.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAppointment_CellContentClick);
             // 
@@ -134,10 +139,12 @@
             // 
             // panel3
             // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.Controls.Add(this.txtSearch);
-            this.panel3.Location = new System.Drawing.Point(0, 85);
+            this.panel3.Location = new System.Drawing.Point(0, 53);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1142, 59);
+            this.panel3.Size = new System.Drawing.Size(1178, 59);
             this.panel3.TabIndex = 53;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
@@ -147,11 +154,11 @@
             this.btnCancel.BackColor = System.Drawing.Color.Silver;
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(703, 656);
+            this.btnCancel.Location = new System.Drawing.Point(891, 763);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(210, 71);
+            this.btnCancel.Size = new System.Drawing.Size(187, 67);
             this.btnCancel.TabIndex = 68;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -163,11 +170,11 @@
             this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(132)))), ((int)(((byte)(44)))));
             this.btnUpdate.FlatAppearance.BorderSize = 0;
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(405, 656);
+            this.btnUpdate.Location = new System.Drawing.Point(593, 763);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(210, 71);
+            this.btnUpdate.Size = new System.Drawing.Size(187, 67);
             this.btnUpdate.TabIndex = 67;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -179,11 +186,11 @@
             this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
             this.btnSave.FlatAppearance.BorderSize = 0;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(107, 656);
+            this.btnSave.Location = new System.Drawing.Point(295, 763);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(210, 71);
+            this.btnSave.Size = new System.Drawing.Size(187, 67);
             this.btnSave.TabIndex = 66;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -193,7 +200,7 @@
             // 
             this.lblCus.AutoSize = true;
             this.lblCus.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCus.Location = new System.Drawing.Point(138, 497);
+            this.lblCus.Location = new System.Drawing.Point(182, 578);
             this.lblCus.Name = "lblCus";
             this.lblCus.Size = new System.Drawing.Size(129, 21);
             this.lblCus.TabIndex = 62;
@@ -214,7 +221,7 @@
             // txtCusID
             // 
             this.txtCusID.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCusID.Location = new System.Drawing.Point(349, 488);
+            this.txtCusID.Location = new System.Drawing.Point(393, 569);
             this.txtCusID.Name = "txtCusID";
             this.txtCusID.Size = new System.Drawing.Size(582, 30);
             this.txtCusID.TabIndex = 55;
@@ -223,7 +230,7 @@
             // 
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate.Location = new System.Drawing.Point(138, 572);
+            this.lblDate.Location = new System.Drawing.Point(182, 653);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(188, 21);
             this.lblDate.TabIndex = 61;
@@ -236,7 +243,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1142, 53);
+            this.panel1.Size = new System.Drawing.Size(1188, 53);
             this.panel1.TabIndex = 59;
             // 
             // guna2Elipse1
@@ -248,7 +255,7 @@
             this.dateTimePickerAppointment.CustomFormat = "yyyy-MM-dd HH:mm";
             this.dateTimePickerAppointment.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerAppointment.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerAppointment.Location = new System.Drawing.Point(349, 563);
+            this.dateTimePickerAppointment.Location = new System.Drawing.Point(393, 644);
             this.dateTimePickerAppointment.Name = "dateTimePickerAppointment";
             this.dateTimePickerAppointment.Size = new System.Drawing.Size(582, 30);
             this.dateTimePickerAppointment.TabIndex = 70;
@@ -258,7 +265,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1142, 766);
+            this.ClientSize = new System.Drawing.Size(1188, 857);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.dateTimePickerAppointment);
             this.Controls.Add(this.panel2);

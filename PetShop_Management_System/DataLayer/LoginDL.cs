@@ -10,32 +10,30 @@ using TransObject;
 
 namespace DataLayer
 {
-    public class LoginDL: Dataprovider
+    public class LoginDL : Dataprovider
     {
-            public string CheckLogin(Account account)
+        public string CheckLogin(Account account)
+        {
+            try
             {
-                try
-                {
-                    Connect();
-                    string sql = "SELECT Position FROM Employee WHERE Username = @Username AND Password = @Password";
-                    SqlCommand cmd = new SqlCommand(sql, cn);
-                    cmd.CommandType = CommandType.Text;
-                    cmd.Parameters.AddWithValue("@Username", account.Username);
-                    cmd.Parameters.AddWithValue("@Password", account.Password);
+                Connect();
+                string sql = "SELECT Position FROM Employee WHERE Username = @Username AND Password = @Password";
+                SqlCommand cmd = new SqlCommand(sql, cn);
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.AddWithValue("@Username", account.Username);
+                cmd.Parameters.AddWithValue("@Password", account.Password);
 
-                    return cmd.ExecuteScalar().ToString();
-                }
-                catch (SqlException ex)
-                {
-                    throw ex;
-                }
-                finally
-                {
-                    Disconnect();
-                }
+                return cmd.ExecuteScalar().ToString();
             }
-
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                Disconnect();
+            }
         }
+
     }
-
-
+}

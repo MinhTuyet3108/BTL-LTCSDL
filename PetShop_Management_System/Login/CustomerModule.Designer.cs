@@ -39,16 +39,6 @@
             this.btnReset = new System.Windows.Forms.Button();
             this.btAdd = new System.Windows.Forms.Button();
             this.dgvCustomer = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CustomerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
@@ -65,6 +55,16 @@
             this.label8 = new System.Windows.Forms.Label();
             this.cbGender = new System.Windows.Forms.ComboBox();
             this.btupdate = new System.Windows.Forms.Button();
+            this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CustomerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).BeginInit();
             this.panel2.SuspendLayout();
@@ -159,6 +159,8 @@
             // dgvCustomer
             // 
             this.dgvCustomer.AllowUserToAddRows = false;
+            this.dgvCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvCustomer.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvCustomer.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -183,95 +185,14 @@
             this.Edit,
             this.Delete});
             this.dgvCustomer.EnableHeadersVisualStyles = false;
-            this.dgvCustomer.Location = new System.Drawing.Point(0, 69);
+            this.dgvCustomer.Location = new System.Drawing.Point(3, 69);
             this.dgvCustomer.Name = "dgvCustomer";
             this.dgvCustomer.RowHeadersVisible = false;
             this.dgvCustomer.RowHeadersWidth = 62;
-            this.dgvCustomer.Size = new System.Drawing.Size(1127, 264);
+            this.dgvCustomer.Size = new System.Drawing.Size(1124, 267);
             this.dgvCustomer.TabIndex = 57;
             this.dgvCustomer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomer_CellClick);
             this.dgvCustomer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomer_CellContentClick);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn1.HeaderText = "No";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 63;
-            // 
-            // CustomerID
-            // 
-            this.CustomerID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.CustomerID.HeaderText = "ID";
-            this.CustomerID.MinimumWidth = 8;
-            this.CustomerID.Name = "CustomerID";
-            this.CustomerID.Width = 56;
-            // 
-            // LastName
-            // 
-            this.LastName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.LastName.HeaderText = " LastName";
-            this.LastName.MinimumWidth = 8;
-            this.LastName.Name = "LastName";
-            this.LastName.Width = 134;
-            // 
-            // FirstName
-            // 
-            this.FirstName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.FirstName.HeaderText = "FirstName";
-            this.FirstName.MinimumWidth = 8;
-            this.FirstName.Name = "FirstName";
-            this.FirstName.Width = 125;
-            // 
-            // Gender
-            // 
-            this.Gender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Gender.HeaderText = "Gender";
-            this.Gender.MinimumWidth = 8;
-            this.Gender.Name = "Gender";
-            this.Gender.Width = 109;
-            // 
-            // Phone
-            // 
-            this.Phone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Phone.HeaderText = "Phone";
-            this.Phone.MinimumWidth = 8;
-            this.Phone.Name = "Phone";
-            this.Phone.Width = 96;
-            // 
-            // Address
-            // 
-            this.Address.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Address.HeaderText = "Address";
-            this.Address.MinimumWidth = 8;
-            this.Address.Name = "Address";
-            // 
-            // Email
-            // 
-            this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Email.HeaderText = "Email";
-            this.Email.MinimumWidth = 8;
-            this.Email.Name = "Email";
-            this.Email.Width = 83;
-            // 
-            // Edit
-            // 
-            this.Edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Edit.HeaderText = "";
-            this.Edit.Image = ((System.Drawing.Image)(resources.GetObject("Edit.Image")));
-            this.Edit.MinimumWidth = 8;
-            this.Edit.Name = "Edit";
-            this.Edit.Width = 8;
-            // 
-            // Delete
-            // 
-            this.Delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Delete.HeaderText = "";
-            this.Delete.Image = ((System.Drawing.Image)(resources.GetObject("Delete.Image")));
-            this.Delete.MinimumWidth = 8;
-            this.Delete.Name = "Delete";
-            this.Delete.Width = 8;
             // 
             // panel2
             // 
@@ -325,11 +246,13 @@
             // 
             // guna2CustomGradientPanel1
             // 
+            this.guna2CustomGradientPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2CustomGradientPanel1.Controls.Add(this.panel2);
             this.guna2CustomGradientPanel1.Controls.Add(this.dgvCustomer);
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(0, 51);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1151, 331);
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1127, 339);
             this.guna2CustomGradientPanel1.TabIndex = 58;
             // 
             // label1
@@ -421,6 +344,7 @@
             // 
             // btupdate
             // 
+            this.btupdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btupdate.BackColor = System.Drawing.Color.SandyBrown;
             this.btupdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btupdate.ForeColor = System.Drawing.Color.White;
@@ -431,6 +355,87 @@
             this.btupdate.Text = "Update";
             this.btupdate.UseVisualStyleBackColor = false;
             this.btupdate.Click += new System.EventHandler(this.btupdate_Click);
+            // 
+            // Delete
+            // 
+            this.Delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Delete.HeaderText = "";
+            this.Delete.Image = ((System.Drawing.Image)(resources.GetObject("Delete.Image")));
+            this.Delete.MinimumWidth = 8;
+            this.Delete.Name = "Delete";
+            this.Delete.Width = 8;
+            // 
+            // Edit
+            // 
+            this.Edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Edit.HeaderText = "";
+            this.Edit.Image = ((System.Drawing.Image)(resources.GetObject("Edit.Image")));
+            this.Edit.MinimumWidth = 8;
+            this.Edit.Name = "Edit";
+            this.Edit.Width = 8;
+            // 
+            // Email
+            // 
+            this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Email.HeaderText = "Email";
+            this.Email.MinimumWidth = 8;
+            this.Email.Name = "Email";
+            this.Email.Width = 83;
+            // 
+            // Address
+            // 
+            this.Address.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Address.HeaderText = "Address";
+            this.Address.MinimumWidth = 8;
+            this.Address.Name = "Address";
+            // 
+            // Phone
+            // 
+            this.Phone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Phone.HeaderText = "Phone";
+            this.Phone.MinimumWidth = 8;
+            this.Phone.Name = "Phone";
+            this.Phone.Width = 96;
+            // 
+            // Gender
+            // 
+            this.Gender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Gender.HeaderText = "Gender";
+            this.Gender.MinimumWidth = 8;
+            this.Gender.Name = "Gender";
+            this.Gender.Width = 109;
+            // 
+            // FirstName
+            // 
+            this.FirstName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.FirstName.HeaderText = "FirstName";
+            this.FirstName.MinimumWidth = 8;
+            this.FirstName.Name = "FirstName";
+            this.FirstName.Width = 125;
+            // 
+            // LastName
+            // 
+            this.LastName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.LastName.HeaderText = " LastName";
+            this.LastName.MinimumWidth = 8;
+            this.LastName.Name = "LastName";
+            this.LastName.Width = 134;
+            // 
+            // CustomerID
+            // 
+            this.CustomerID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.CustomerID.HeaderText = "ID";
+            this.CustomerID.MinimumWidth = 8;
+            this.CustomerID.Name = "CustomerID";
+            this.CustomerID.Width = 56;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn1.HeaderText = "No";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 63;
             // 
             // CustomerModule
             // 
@@ -498,6 +503,7 @@
         public System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cbGender;
+        private System.Windows.Forms.Button btupdate;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn CustomerID;
         private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
@@ -508,6 +514,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewImageColumn Edit;
         private System.Windows.Forms.DataGridViewImageColumn Delete;
-        private System.Windows.Forms.Button btupdate;
     }
 }

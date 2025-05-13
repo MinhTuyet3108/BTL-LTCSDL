@@ -50,7 +50,7 @@ namespace Login
             try
             {
 
-                if (MessageBox.Show("Do you want to save this appointment information?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Lưu lịch hẹn này?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     Appointment appointment = new Appointment
                     {
@@ -86,7 +86,7 @@ namespace Login
             try
             {
 
-                if (MessageBox.Show("Do you want to update this appointment information?", "Update Appointment", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Bạn muốn cập nhật lịch hẹn này?", "Cập nhật lịch hẹn", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     Appointment appointment = new Appointment()
                     {
@@ -105,8 +105,7 @@ namespace Login
             }
             catch (SqlException ex)
             {
-
-                MessageBox.Show("Error: " + ex.Message, "SQL Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw ex;
             }
         }
 
@@ -165,7 +164,7 @@ namespace Login
                     else if (dgvAppointment.Columns[e.ColumnIndex].Name == "Delete")
                     {
                         int id = Convert.ToInt32(dgvAppointment.Rows[e.RowIndex].Cells["AppointmentID"].Value);
-                        if (MessageBox.Show("Delete this appointment?", "Confirm", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                        if (MessageBox.Show("Xóa lịch hẹn này?", "Xác nhận", MessageBoxButtons.YesNo) == DialogResult.Yes)
                         {
                             appointmentBL.DeleteAppointment(id);
                             LoadAppointment();

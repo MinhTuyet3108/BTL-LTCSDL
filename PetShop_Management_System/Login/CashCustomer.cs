@@ -18,6 +18,7 @@ namespace Login
         private CustomerBL customerBL;
         public Customer SelectedCustomer { get; private set; } // Thêm thuộc tính SelectedProduct
         public string CustomerName { get; private set; }
+
         public CashCustomer()
         {
             InitializeComponent();
@@ -25,26 +26,32 @@ namespace Login
             customerBL = new CustomerBL();
         }
 
+        private void InitializeDataGridView()
+        {
+            dgvCustomer.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            if (!dgvCustomer.Columns.Contains("Edit"))
+            {
+                DataGridViewButtonColumn btn = new DataGridViewButtonColumn
+                {
+                    HeaderText = "Chọn",
+                    Text = "Chọn",
+                    Name = "Edit",
+                    UseColumnTextForButtonValue = true
+                };
+                dgvCustomer.Columns.Add(btn);
+            }
+            throw new NotImplementedException();
+        }
+
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
             LoadCustomers();
             GenerateTransactionNo();
             // Thêm cột nút "Chọn" nếu chưa có
-            if (!dgvCustomer.Columns.Contains("Edit"))
-            {
-                DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
-                btn.HeaderText = "Chọn";
-                btn.Text = "Chọn";
-                btn.Name = "Edit";
-                btn.UseColumnTextForButtonValue = true;
-                dgvCustomer.Columns.Add(btn);
-            }
-            // 🔧 Gắn sự kiện chọn dòng
-            this.dgvCustomer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomer_CellContentClick);
+
         }
         private void LoadCustomers()
         {
-
             try
             {
                 dgvCustomer.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -118,35 +125,91 @@ namespace Login
                     this.Close(); // Đóng form sau khi chọn
                 }
             }
+
+
             catch (Exception ex)
             {
                 MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-            public void LoadSearchCustomer(List<Customer> customers)
-            {
-                dgvCustomer.Rows.Clear(); // Xóa dữ liệu cũ
-                int i = 0;
-                foreach (Customer c in customers)
-                {
-                    dgvCustomer.Rows.Add(
-                        i++,
-                        c.CustomerID,
-                        c.LastName,
-                        c.FirstName,
-                        c.Phone
 
-                    );
+        public void LoadSearchCustomer(List<Customer> customers)
+        {
+            try
+            {
+                dgvCustomer.DataSource = null; // Xóa dữ liệu cũ
+                dgvCustomer.Columns.Clear(); // Xóa cột cũ
+
+                if (customers != null && customers.Any())
+                {
+                    dgvCustomer.DataSource = customers;
+
+                    // Gán lại header
+                    dgvCustomer.Columns["CustomerID"].HeaderText = "Mã KH";
+                    dgvCustomer.Columns["FirstName"].HeaderText = "Tên";
+                    dgvCustomer.Columns["LastName"].HeaderText = "Họ";
+                    dgvCustomer.Columns["Phone"].HeaderText = "SĐT";
+
+                    // Thêm cột nút "Chọn"
+                    if (!dgvCustomer.Columns.Contains("Edit"))
+                    {
+                        DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
+                        btn.HeaderText = "Chọn";
+                        btn.Text = "Chọn";
+                        btn.Name = "Edit";
+                        btn.UseColumnTextForButtonValue = true;
+                        dgvCustomer.Columns.Add(btn);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy khách hàng nào!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadCustomers(); // Tải lại danh sách đầy đủ nếu không tìm thấy
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi hiển thị kết quả tìm kiếm: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            string keyword = txtSearch.Text.Trim();
-            if (string.IsNullOrEmpty(keyword))
+            try
             {
-                LoadCustomers();
+                string keyword = txtSearch.Text.Trim();
+                if (string.IsNullOrEmpty(keyword))
+                {
+                    LoadCustomers(); // Tải lại danh sách đầy đủ nếu từ khóa rỗng
+                    return;
+                }
+
+                // Lấy danh sách khách hàng từ CustomerBL
+                var allCustomers = customerBL.GetCustomers();
+                if (allCustomers == null || !allCustomers.Any())
+                {
+                    MessageBox.Show("Không có dữ liệu khách hàng để tìm kiếm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Lọc khách hàng theo từ khóa (FirstName hoặc LastName)
+                var filteredCustomers = allCustomers
+                    .Where(c => (c.FirstName != null && c.FirstName.IndexOf(keyword, StringComparison.OrdinalIgnoreCase) >= 0) ||
+                                (c.LastName != null && c.LastName.IndexOf(keyword, StringComparison.OrdinalIgnoreCase) >= 0))
+                    .ToList();
+
+                LoadSearchCustomer(filteredCustomers);
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi tìm kiếm: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void CashCustomer_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

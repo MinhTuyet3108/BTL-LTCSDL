@@ -42,3 +42,14 @@ C:\BTL-LTCSDL\PetShop_Management_System\BusinessLayer\obj\Debug\BusinessLayer.cs
 C:\BTL-LTCSDL\PetShop_Management_System\BusinessLayer\obj\Debug\Business.EA331CBA.Up2Date
 C:\BTL-LTCSDL\PetShop_Management_System\BusinessLayer\obj\Debug\BusinessLayer.dll
 C:\BTL-LTCSDL\PetShop_Management_System\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\MINH TUYET\OneDrive\Hình ảnh\BTL-LTCSDL\PetShop_Management_System\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Users\MINH TUYET\OneDrive\Hình ảnh\BTL-LTCSDL\PetShop_Management_System\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\MINH TUYET\OneDrive\Hình ảnh\BTL-LTCSDL\PetShop_Management_System\BusinessLayer\bin\Debug\DataLayer.dll
+C:\Users\MINH TUYET\OneDrive\Hình ảnh\BTL-LTCSDL\PetShop_Management_System\BusinessLayer\bin\Debug\TransObject.dll
+C:\Users\MINH TUYET\OneDrive\Hình ảnh\BTL-LTCSDL\PetShop_Management_System\BusinessLayer\bin\Debug\DataLayer.pdb
+C:\Users\MINH TUYET\OneDrive\Hình ảnh\BTL-LTCSDL\PetShop_Management_System\BusinessLayer\bin\Debug\TransObject.pdb
+C:\Users\MINH TUYET\OneDrive\Hình ảnh\BTL-LTCSDL\PetShop_Management_System\BusinessLayer\obj\Debug\BusinessLayer.csproj.AssemblyReference.cache
+C:\Users\MINH TUYET\OneDrive\Hình ảnh\BTL-LTCSDL\PetShop_Management_System\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\MINH TUYET\OneDrive\Hình ảnh\BTL-LTCSDL\PetShop_Management_System\BusinessLayer\obj\Debug\Business.EA331CBA.Up2Date
+C:\Users\MINH TUYET\OneDrive\Hình ảnh\BTL-LTCSDL\PetShop_Management_System\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\MINH TUYET\OneDrive\Hình ảnh\BTL-LTCSDL\PetShop_Management_System\BusinessLayer\obj\Debug\BusinessLayer.pdb

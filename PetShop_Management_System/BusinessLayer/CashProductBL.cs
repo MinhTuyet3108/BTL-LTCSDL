@@ -50,5 +50,16 @@ namespace BusinessLayer
 
             
         }
+        public List<Product> SearchProducts(string keyword) // Đổi tên từ Search thành SearchProducts
+        {
+            try
+            {
+                return cashproductDL.SearchProducts(keyword);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

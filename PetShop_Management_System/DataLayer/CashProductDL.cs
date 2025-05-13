@@ -73,6 +73,42 @@ namespace DataLayer
                 Disconnect();
             }
         }
+        public List<Product> SearchProducts(string keyword) // Đổi tên từ Search thành SearchProducts
+        {
+            List<Product> products = new List<Product>();
+
+            try
+            {
+                Connect();
+                SqlCommand cmd = new SqlCommand("uspSearchProduct", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Keyword", "%" + keyword + "%");
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    string productID = reader["ProductID"].ToString();
+                    string prName = reader["PrName"].ToString();
+                    decimal price = Convert.ToDecimal(reader["Price"]);
+                    int stock = Convert.ToInt32(reader["Stock"]);
+                    string category = reader["Category"].ToString();
+
+                    Product product = new Product(productID, prName, price, stock, category);
+                    products.Add(product);
+                }
+                reader.Close();
+                return products;
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                Disconnect();
+            }
+        }
 
     }
+
 }

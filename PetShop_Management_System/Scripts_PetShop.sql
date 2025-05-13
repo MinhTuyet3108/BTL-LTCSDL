@@ -425,13 +425,13 @@ GO
 ---//----
 --THÚ CƯNG
 --LẤY DANH SÁCH THÚ CƯNG
-ALTER PROCEDURE [dbo].[uspGetPet]
+CREATE PROCEDURE [dbo].[uspGetPet]
 AS
 BEGIN
     SELECT * FROM Pet;
 END
 GO
---THÊM SẢN PHẨM
+--THÊM THÚ CƯNG
 CREATE PROCEDURE [dbo].[uspAddPet]
 	@PetName nvarchar(50),
     @Type nvarchar(50),
@@ -446,8 +446,8 @@ END
 GO
 
 
---XÓA SẢN PHẨM
-ALTER PROCEDURE uspDeletePet
+--XÓA THÚ CƯNG
+CREATE PROCEDURE uspDeletePet
     @PetID int
 AS
 BEGIN
@@ -458,7 +458,7 @@ END
 GO
 
 
---TÌM KIẾM SẢN PHẨM
+--TÌM KIẾM THÚ CƯNG
 CREATE PROCEDURE [dbo].[uspSearchPet]
     @Keyword NVARCHAR(100)
 AS
@@ -469,7 +469,7 @@ BEGIN
 END
 GO
 
---CHỈNH SỬA SẢN PHẨM
+--CHỈNH SỬA THÚ CƯNG
 CREATE PROCEDURE [dbo].[uspUpdatePet]
 	
     @PetID INT,
@@ -503,7 +503,7 @@ GO
 
 -- Thêm giao dịch
 CREATE PROCEDURE [dbo].[uspAddCash]
-  @Transno VARCHAR(15),
+  @Transno VARCHAR(20),
     @Pcode VARCHAR(10),
     @Pname NVARCHAR(50),
     @Qty INT,
@@ -548,7 +548,7 @@ GO
 -- Cập nhật giao dịch
 CREATE PROCEDURE [dbo].[uspUpdateCash]
     @CashID VARCHAR(10),
-    @Transno VARCHAR(15),
+    @Transno VARCHAR(20),
     @Pcode VARCHAR(15),
     @Pname VARCHAR(50),
     @Qty INT,
@@ -606,7 +606,7 @@ VALUES ('CashID', 0);
 GO
 
 ALTER PROCEDURE uspAddCash
-    @Transno VARCHAR(15),
+    @Transno VARCHAR(20),
     @Pcode VARCHAR(10),
     @Pname NVARCHAR(50),
     @Qty INT,

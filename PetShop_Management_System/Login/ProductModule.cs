@@ -66,12 +66,12 @@ namespace Login
             if (string.IsNullOrWhiteSpace(txtID.Text) || string.IsNullOrWhiteSpace(txtPrName.Text) || string.IsNullOrWhiteSpace(txtPrice.Text) ||
     string.IsNullOrWhiteSpace(txtStock.Text) || string.IsNullOrWhiteSpace(cbCategory.Text))
             {
-                MessageBox.Show("Please fill in all information. ", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin. ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             try
             {
-                if (MessageBox.Show("Do you want to update this product information?", "Update Product", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Cập nhật thông tin sản phẩm này?", "Cập nhật", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     Product product = new Product()
                     {
@@ -85,7 +85,7 @@ namespace Login
 
                     if (productBL.UpdateProduct(product))
                     {
-                        MessageBox.Show("Update successfully!");
+                        MessageBox.Show("Cập nhật thành công!");
                         LoadProduct();
                         Clear();
                     }
@@ -104,13 +104,13 @@ namespace Login
             if (string.IsNullOrWhiteSpace(txtID.Text) || string.IsNullOrWhiteSpace(txtPrName.Text) || string.IsNullOrWhiteSpace(txtPrice.Text) ||
     string.IsNullOrWhiteSpace(txtStock.Text) || string.IsNullOrWhiteSpace(cbCategory.Text))
             {
-                MessageBox.Show("Please fill in all information. ", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin. ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             try
             {
 
-                if (MessageBox.Show("Do you want to save this product information?", "New Product", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Lưu thông tin sản phẩm này?", "Thêm sản phẩm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     Product product = new Product
                     {
@@ -122,7 +122,7 @@ namespace Login
                     };
 
                     productBL.AddProduct(product);
-                    MessageBox.Show("Product added successfully!", title);
+                    MessageBox.Show("Thêm sản phẩm thành công!", title);
                     LoadProduct();
                     Clear();
 
@@ -175,7 +175,7 @@ namespace Login
                     else if (dgvProduct.Columns[e.ColumnIndex].Name == "Delete")
                     {
                         string id = dgvProduct.Rows[e.RowIndex].Cells["ProductID"].Value.ToString();
-                        if (MessageBox.Show("Delete this product?", "Confirm", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                        if (MessageBox.Show("Xóa sản phẩm này?", "Xác nhận", MessageBoxButtons.YesNo) == DialogResult.Yes)
                         {
                             productBL.DeleteProduct(id);
                             LoadProduct();

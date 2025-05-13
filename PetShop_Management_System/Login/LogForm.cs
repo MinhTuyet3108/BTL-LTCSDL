@@ -21,7 +21,7 @@ namespace Login
             InitializeComponent();
         }
 
-             private void btLogin_Click(object sender, EventArgs e)
+        private void btLogin_Click(object sender, EventArgs e)
         {
             LoginBL bus = new LoginBL();
             Account account = new Account(txtUsername.Text, txtPass.Text)
@@ -50,11 +50,11 @@ namespace Login
         }
 
 
-     private void btForget_Click(object sender, EventArgs e)
+        private void btForget_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Vui lòng liên hệ quản trị viên để lấy lại mật khẩu.", "Quên mật khẩu", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-    private void btnClose_Click(object sender, EventArgs e)
+        private void btnClose_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Exit Application?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
@@ -62,6 +62,6 @@ namespace Login
             }
         }
 
-       
+
     }
 }

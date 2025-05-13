@@ -31,11 +31,24 @@ using DataLayer;
         {
             try
             {
-                foreach (var cash in cart)
+            var distinctItems = cart
+            .GroupBy(c => new { c.Transno, c.Pcode, c.Price })
+            .Select(g => new Cash
+            {
+                Transno = g.Key.Transno,
+                Pcode = g.Key.Pcode,
+                Pname = g.First().Pname,
+                Qty = g.Sum(c => c.Qty ?? 0),
+                Price = g.Key.Price,
+                Total = g.Sum(c => c.Qty ?? 0) * g.Key.Price,
+                Cid = g.First().Cid,
+                Cashier = g.First().Cashier
+            })
+            .ToList();
+            //lưu từng giao dịch
+            foreach (var cash in cart)
                 {
-                    // Đảm bảo Transno và Cashier được gán
-                    if (string.IsNullOrEmpty(cash.Transno))
-                        cash.Transno = transno;
+
                     if (string.IsNullOrEmpty(cash.Cashier))
                     {
                         throw new ArgumentNullException("Cashier không được null");

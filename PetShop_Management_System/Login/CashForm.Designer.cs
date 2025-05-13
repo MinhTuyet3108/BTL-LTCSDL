@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CashForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTotal = new System.Windows.Forms.Label();
             this.lblTransno = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,15 +39,16 @@
             this.btnCash = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvCash = new System.Windows.Forms.DataGridView();
+            this.Increase = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Decrease = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Increase = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Decrease = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnPay = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCash)).BeginInit();
             this.panel1.SuspendLayout();
@@ -58,12 +59,13 @@
             // 
             this.lblTotal.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lblTotal.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(697, 14);
+            this.lblTotal.Location = new System.Drawing.Point(635, 13);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(110, 27);
             this.lblTotal.TabIndex = 7;
             this.lblTotal.Text = "0.00";
             this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTotal.Click += new System.EventHandler(this.lblTotal_Click);
             // 
             // lblTransno
             // 
@@ -81,7 +83,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
-            this.label3.Location = new System.Drawing.Point(524, 14);
+            this.label3.Location = new System.Drawing.Point(489, 16);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(118, 22);
             this.label3.TabIndex = 5;
@@ -135,7 +137,7 @@
             // 
             this.btnCash.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.btnCash.ForeColor = System.Drawing.Color.White;
-            this.btnCash.Location = new System.Drawing.Point(965, 13);
+            this.btnCash.Location = new System.Drawing.Point(990, 6);
             this.btnCash.Name = "btnCash";
             this.btnCash.Size = new System.Drawing.Size(149, 49);
             this.btnCash.TabIndex = 8;
@@ -159,14 +161,14 @@
             this.dgvCash.AllowUserToAddRows = false;
             this.dgvCash.BackgroundColor = System.Drawing.Color.White;
             this.dgvCash.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCash.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCash.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvCash.ColumnHeadersHeight = 30;
             this.dgvCash.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvCash.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -181,6 +183,33 @@
             this.dgvCash.Size = new System.Drawing.Size(1148, 493);
             this.dgvCash.TabIndex = 8;
             this.dgvCash.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCash_CellContentClick);
+            // 
+            // Increase
+            // 
+            this.Increase.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Increase.HeaderText = "";
+            this.Increase.Image = ((System.Drawing.Image)(resources.GetObject("Increase.Image")));
+            this.Increase.MinimumWidth = 8;
+            this.Increase.Name = "Increase";
+            this.Increase.Width = 8;
+            // 
+            // Decrease
+            // 
+            this.Decrease.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Decrease.HeaderText = "";
+            this.Decrease.Image = ((System.Drawing.Image)(resources.GetObject("Decrease.Image")));
+            this.Decrease.MinimumWidth = 8;
+            this.Decrease.Name = "Decrease";
+            this.Decrease.Width = 8;
+            // 
+            // Delete
+            // 
+            this.Delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Delete.HeaderText = "";
+            this.Delete.Image = ((System.Drawing.Image)(resources.GetObject("Delete.Image")));
+            this.Delete.MinimumWidth = 8;
+            this.Delete.Name = "Delete";
+            this.Delete.Width = 8;
             // 
             // panel1
             // 
@@ -207,6 +236,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.btnPay);
             this.panel3.Controls.Add(this.lblTransno);
             this.panel3.Controls.Add(this.btnCash);
             this.panel3.Controls.Add(this.lblTotal);
@@ -245,32 +275,17 @@
             this.dataGridViewImageColumn3.Name = "dataGridViewImageColumn3";
             this.dataGridViewImageColumn3.Width = 125;
             // 
-            // Increase
+            // btnPay
             // 
-            this.Increase.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Increase.HeaderText = "";
-            this.Increase.Image = ((System.Drawing.Image)(resources.GetObject("Increase.Image")));
-            this.Increase.MinimumWidth = 8;
-            this.Increase.Name = "Increase";
-            this.Increase.Width = 8;
-            // 
-            // Decrease
-            // 
-            this.Decrease.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Decrease.HeaderText = "";
-            this.Decrease.Image = ((System.Drawing.Image)(resources.GetObject("Decrease.Image")));
-            this.Decrease.MinimumWidth = 8;
-            this.Decrease.Name = "Decrease";
-            this.Decrease.Width = 8;
-            // 
-            // Delete
-            // 
-            this.Delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Delete.HeaderText = "";
-            this.Delete.Image = ((System.Drawing.Image)(resources.GetObject("Delete.Image")));
-            this.Delete.MinimumWidth = 8;
-            this.Delete.Name = "Delete";
-            this.Delete.Width = 8;
+            this.btnPay.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnPay.ForeColor = System.Drawing.Color.White;
+            this.btnPay.Location = new System.Drawing.Point(826, 6);
+            this.btnPay.Name = "btnPay";
+            this.btnPay.Size = new System.Drawing.Size(149, 49);
+            this.btnPay.TabIndex = 9;
+            this.btnPay.Text = "Pay";
+            this.btnPay.UseVisualStyleBackColor = false;
+            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
             // 
             // CashForm
             // 
@@ -315,5 +330,6 @@
         private System.Windows.Forms.DataGridViewImageColumn Increase;
         private System.Windows.Forms.DataGridViewImageColumn Decrease;
         private System.Windows.Forms.DataGridViewImageColumn Delete;
+        private System.Windows.Forms.Button btnPay;
     }
 }

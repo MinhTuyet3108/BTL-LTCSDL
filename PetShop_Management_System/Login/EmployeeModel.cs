@@ -68,7 +68,7 @@ namespace Login
                     else if (dgvEmployee.Columns[e.ColumnIndex].Name == "Delete")
                     {
                             string id = dgvEmployee.Rows[e.RowIndex].Cells["EmployeeID"].Value.ToString();
-                            if (MessageBox.Show("Delete this employee?", "Confirm", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                            if (MessageBox.Show("Xóa nhân viên này?", "Xác nhận", MessageBoxButtons.YesNo) == DialogResult.Yes)
                             {
                                 employeeBL.DeleteEmployee(id);
                                 LoadEmployee();
@@ -98,10 +98,10 @@ namespace Login
     string.IsNullOrWhiteSpace(cbPosition.Text) || string.IsNullOrWhiteSpace(txtSalary.Text) || string.IsNullOrWhiteSpace(txtPhone.Text) ||
     string.IsNullOrWhiteSpace(txtUsername.Text) || string.IsNullOrWhiteSpace(txtPass.Text))
             {
-                MessageBox.Show("Please fill in all information. ", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin. ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if (MessageBox.Show("Do you want to save this employee information?", "New Employee", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Lưu thông tin nhân viên này?", "Nhân viên mới", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Employee employee = new Employee
                 {
@@ -116,7 +116,7 @@ namespace Login
                 };
 
                 employeeBL.AddEmployee(employee);
-                MessageBox.Show("Employee added successfully!", title);
+                MessageBox.Show("Thêm nhân viên thành công!", title);
                 LoadEmployee();
                 Clear();
 
@@ -144,12 +144,12 @@ namespace Login
     string.IsNullOrWhiteSpace(cbPosition.Text) || string.IsNullOrWhiteSpace(txtSalary.Text) || string.IsNullOrWhiteSpace(txtPhone.Text) ||
     string.IsNullOrWhiteSpace(txtUsername.Text) || string.IsNullOrWhiteSpace(txtPass.Text))
             {
-                MessageBox.Show("Please fill in all information. ", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin. ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             try
                 {
-                    if (MessageBox.Show("Do you want to update this employee information?", "Update Employee", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (MessageBox.Show("Cập nhật thông tin nhân viên này??", "Cập nhật", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         Employee emp = new Employee()
                         {
@@ -166,7 +166,7 @@ namespace Login
 
                         if (employeeBL.UpdateEmployee(emp))
                         {
-                            MessageBox.Show("Update successfully!");
+                            MessageBox.Show("Cập nhật thành công!");
                             LoadEmployee();
                             Clear();
                         }

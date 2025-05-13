@@ -165,6 +165,7 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(390, 30);
             this.txtUsername.TabIndex = 13;
+            this.txtUsername.Text = "binhnguyen";
             // 
             // label7
             // 
@@ -195,6 +196,7 @@
             this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(390, 30);
             this.txtPass.TabIndex = 13;
+            this.txtPass.Text = "pass123";
             // 
             // btLogin
             // 

@@ -85,3 +85,32 @@ C:\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\PetShopManagement.csproj
 C:\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\PetShopM.0603202C.Up2Date
 C:\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.exe
 C:\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.pdb
+C:\Users\MINH TUYET\OneDrive\Hình ảnh\BTL-LTCSDL\PetShop_Management_System\Login\bin\Debug\Login.exe.config
+C:\Users\MINH TUYET\OneDrive\Hình ảnh\BTL-LTCSDL\PetShop_Management_System\Login\bin\Debug\Login.exe
+C:\Users\MINH TUYET\OneDrive\Hình ảnh\BTL-LTCSDL\PetShop_Management_System\Login\bin\Debug\Login.pdb
+C:\Users\MINH TUYET\OneDrive\Hình ảnh\BTL-LTCSDL\PetShop_Management_System\Login\bin\Debug\BusinessLayer.dll
+C:\Users\MINH TUYET\OneDrive\Hình ảnh\BTL-LTCSDL\PetShop_Management_System\Login\bin\Debug\Guna.UI2.dll
+C:\Users\MINH TUYET\OneDrive\Hình ảnh\BTL-LTCSDL\PetShop_Management_System\Login\bin\Debug\TransObject.dll
+C:\Users\MINH TUYET\OneDrive\Hình ảnh\BTL-LTCSDL\PetShop_Management_System\Login\bin\Debug\DataLayer.dll
+C:\Users\MINH TUYET\OneDrive\Hình ảnh\BTL-LTCSDL\PetShop_Management_System\Login\bin\Debug\BusinessLayer.pdb
+C:\Users\MINH TUYET\OneDrive\Hình ảnh\BTL-LTCSDL\PetShop_Management_System\Login\bin\Debug\TransObject.pdb
+C:\Users\MINH TUYET\OneDrive\Hình ảnh\BTL-LTCSDL\PetShop_Management_System\Login\bin\Debug\DataLayer.pdb
+C:\Users\MINH TUYET\OneDrive\Hình ảnh\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\PetShopManagement.csproj.AssemblyReference.cache
+C:\Users\MINH TUYET\OneDrive\Hình ảnh\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.AppointmentModule.resources
+C:\Users\MINH TUYET\OneDrive\Hình ảnh\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.CashCustomer.resources
+C:\Users\MINH TUYET\OneDrive\Hình ảnh\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.CashForm.resources
+C:\Users\MINH TUYET\OneDrive\Hình ảnh\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.CashProduct.resources
+C:\Users\MINH TUYET\OneDrive\Hình ảnh\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.CustomerModule.resources
+C:\Users\MINH TUYET\OneDrive\Hình ảnh\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.Dashboard.resources
+C:\Users\MINH TUYET\OneDrive\Hình ảnh\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.Form1.resources
+C:\Users\MINH TUYET\OneDrive\Hình ảnh\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.Home.resources
+C:\Users\MINH TUYET\OneDrive\Hình ảnh\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.LogForm.resources
+C:\Users\MINH TUYET\OneDrive\Hình ảnh\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.PetModule.resources
+C:\Users\MINH TUYET\OneDrive\Hình ảnh\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.ProductModule.resources
+C:\Users\MINH TUYET\OneDrive\Hình ảnh\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.Properties.Resources.resources
+C:\Users\MINH TUYET\OneDrive\Hình ảnh\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.UserModule.resources
+C:\Users\MINH TUYET\OneDrive\Hình ảnh\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\PetShopManagement.csproj.GenerateResource.cache
+C:\Users\MINH TUYET\OneDrive\Hình ảnh\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\PetShopManagement.csproj.CoreCompileInputs.cache
+C:\Users\MINH TUYET\OneDrive\Hình ảnh\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\PetShopM.0603202C.Up2Date
+C:\Users\MINH TUYET\OneDrive\Hình ảnh\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.exe
+C:\Users\MINH TUYET\OneDrive\Hình ảnh\BTL-LTCSDL\PetShop_Management_System\Login\obj\Debug\Login.pdb
