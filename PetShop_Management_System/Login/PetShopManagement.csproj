@@ -238,5 +238,11 @@
   <ItemGroup>
     <None Include="Resources\delete1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-clipart-animals-dog-cat-pet-sitting-pet-shop-animal-house-animals-pet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
