@@ -3,88 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{468DB0A9-EE5F-4723-BFDB-BB6BADA90B02}|Login\\PetShopManagement.csproj|c:\\users\\minh tuyet\\onedrive\\hi\u0300nh a\u0309nh\\btl-ltcsdl\\petshop_management_system\\login\\logform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{468DB0A9-EE5F-4723-BFDB-BB6BADA90B02}|Login\\PetShopManagement.csproj|solutionrelative:login\\logform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{468DB0A9-EE5F-4723-BFDB-BB6BADA90B02}|Login\\PetShopManagement.csproj|C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\login\\productmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{468DB0A9-EE5F-4723-BFDB-BB6BADA90B02}|Login\\PetShopManagement.csproj|solutionrelative:login\\productmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{468DB0A9-EE5F-4723-BFDB-BB6BADA90B02}|Login\\PetShopManagement.csproj|c:\\users\\minh tuyet\\onedrive\\hi\u0300nh a\u0309nh\\btl-ltcsdl\\petshop_management_system\\login\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{468DB0A9-EE5F-4723-BFDB-BB6BADA90B02}|Login\\PetShopManagement.csproj|solutionrelative:login\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{468DB0A9-EE5F-4723-BFDB-BB6BADA90B02}|Login\\PetShopManagement.csproj|c:\\users\\minh tuyet\\onedrive\\hi\u0300nh a\u0309nh\\btl-ltcsdl\\petshop_management_system\\login\\customermodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{468DB0A9-EE5F-4723-BFDB-BB6BADA90B02}|Login\\PetShopManagement.csproj|solutionrelative:login\\customermodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{468DB0A9-EE5F-4723-BFDB-BB6BADA90B02}|Login\\PetShopManagement.csproj|c:\\users\\minh tuyet\\onedrive\\hi\u0300nh a\u0309nh\\btl-ltcsdl\\petshop_management_system\\login\\cashform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{468DB0A9-EE5F-4723-BFDB-BB6BADA90B02}|Login\\PetShopManagement.csproj|solutionrelative:login\\cashform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{468DB0A9-EE5F-4723-BFDB-BB6BADA90B02}|Login\\PetShopManagement.csproj|C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\login\\productmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{468DB0A9-EE5F-4723-BFDB-BB6BADA90B02}|Login\\PetShopManagement.csproj|solutionrelative:login\\productmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{468DB0A9-EE5F-4723-BFDB-BB6BADA90B02}|Login\\PetShopManagement.csproj|C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\login\\cashform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{468DB0A9-EE5F-4723-BFDB-BB6BADA90B02}|Login\\PetShopManagement.csproj|solutionrelative:login\\cashform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDD15096-515E-422C-BBE8-9E06A47642DC}|DataLayer\\DataLayer.csproj|C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\datalayer\\cashcustomerdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDD15096-515E-422C-BBE8-9E06A47642DC}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\cashcustomerdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{12C64C15-3476-42D5-9046-0D1235CB80CD}|BusinessLayer\\BusinessLayer.csproj|C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\businesslayer\\cashproductbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{12C64C15-3476-42D5-9046-0D1235CB80CD}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\cashproductbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{12C64C15-3476-42D5-9046-0D1235CB80CD}|BusinessLayer\\BusinessLayer.csproj|C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\businesslayer\\cashcustomerbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{12C64C15-3476-42D5-9046-0D1235CB80CD}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\cashcustomerbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{12C64C15-3476-42D5-9046-0D1235CB80CD}|BusinessLayer\\BusinessLayer.csproj|C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\businesslayer\\cashbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{12C64C15-3476-42D5-9046-0D1235CB80CD}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\cashbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDD15096-515E-422C-BBE8-9E06A47642DC}|DataLayer\\DataLayer.csproj|C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\datalayer\\cashdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDD15096-515E-422C-BBE8-9E06A47642DC}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\cashdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{369B6213-F993-476C-90D9-9DB8B5CC6E66}|TransObject\\TransObject.csproj|C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\transobject\\cash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{369B6213-F993-476C-90D9-9DB8B5CC6E66}|TransObject\\TransObject.csproj|solutionrelative:transobject\\cash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|Solution Items{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\Scripts_PetShop.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
-      "RelativeMoniker": "D:0:0:{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|Solution Items{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|solutionrelative:Scripts_PetShop.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{468DB0A9-EE5F-4723-BFDB-BB6BADA90B02}|Login\\PetShopManagement.csproj|C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\login\\petmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{468DB0A9-EE5F-4723-BFDB-BB6BADA90B02}|Login\\PetShopManagement.csproj|solutionrelative:login\\petmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDD15096-515E-422C-BBE8-9E06A47642DC}|DataLayer\\DataLayer.csproj|C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\datalayer\\petdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDD15096-515E-422C-BBE8-9E06A47642DC}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\petdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{12C64C15-3476-42D5-9046-0D1235CB80CD}|BusinessLayer\\BusinessLayer.csproj|C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\businesslayer\\petbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{12C64C15-3476-42D5-9046-0D1235CB80CD}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\petbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{468DB0A9-EE5F-4723-BFDB-BB6BADA90B02}|Login\\PetShopManagement.csproj|C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\login\\petmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{468DB0A9-EE5F-4723-BFDB-BB6BADA90B02}|Login\\PetShopManagement.csproj|solutionrelative:login\\petmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{12C64C15-3476-42D5-9046-0D1235CB80CD}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\minh tuyet\\onedrive\\hi\u0300nh a\u0309nh\\btl-ltcsdl\\petshop_management_system\\businesslayer\\permissionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12C64C15-3476-42D5-9046-0D1235CB80CD}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\permissionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{468DB0A9-EE5F-4723-BFDB-BB6BADA90B02}|Login\\PetShopManagement.csproj|C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\login\\appointmentmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{468DB0A9-EE5F-4723-BFDB-BB6BADA90B02}|Login\\PetShopManagement.csproj|solutionrelative:login\\appointmentmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{468DB0A9-EE5F-4723-BFDB-BB6BADA90B02}|Login\\PetShopManagement.csproj|C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\login\\employeemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{468DB0A9-EE5F-4723-BFDB-BB6BADA90B02}|Login\\PetShopManagement.csproj|solutionrelative:login\\employeemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EDD15096-515E-422C-BBE8-9E06A47642DC}|DataLayer\\DataLayer.csproj|C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\datalayer\\appointmentdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD15096-515E-422C-BBE8-9E06A47642DC}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\appointmentdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{468DB0A9-EE5F-4723-BFDB-BB6BADA90B02}|Login\\PetShopManagement.csproj|C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\login\\customermodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{468DB0A9-EE5F-4723-BFDB-BB6BADA90B02}|Login\\PetShopManagement.csproj|solutionrelative:login\\customermodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{468DB0A9-EE5F-4723-BFDB-BB6BADA90B02}|Login\\PetShopManagement.csproj|C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\login\\cashform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{468DB0A9-EE5F-4723-BFDB-BB6BADA90B02}|Login\\PetShopManagement.csproj|solutionrelative:login\\cashform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{468DB0A9-EE5F-4723-BFDB-BB6BADA90B02}|Login\\PetShopManagement.csproj|C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\login\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{468DB0A9-EE5F-4723-BFDB-BB6BADA90B02}|Login\\PetShopManagement.csproj|solutionrelative:login\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{468DB0A9-EE5F-4723-BFDB-BB6BADA90B02}|Login\\PetShopManagement.csproj|C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\login\\cashcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{468DB0A9-EE5F-4723-BFDB-BB6BADA90B02}|Login\\PetShopManagement.csproj|solutionrelative:login\\cashcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{468DB0A9-EE5F-4723-BFDB-BB6BADA90B02}|Login\\PetShopManagement.csproj|C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\login\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{468DB0A9-EE5F-4723-BFDB-BB6BADA90B02}|Login\\PetShopManagement.csproj|solutionrelative:login\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{468DB0A9-EE5F-4723-BFDB-BB6BADA90B02}|Login\\PetShopManagement.csproj|C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\login\\cashproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{468DB0A9-EE5F-4723-BFDB-BB6BADA90B02}|Login\\PetShopManagement.csproj|solutionrelative:login\\cashproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{468DB0A9-EE5F-4723-BFDB-BB6BADA90B02}|Login\\PetShopManagement.csproj|C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\login\\cashproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{468DB0A9-EE5F-4723-BFDB-BB6BADA90B02}|Login\\PetShopManagement.csproj|solutionrelative:login\\cashproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{468DB0A9-EE5F-4723-BFDB-BB6BADA90B02}|Login\\PetShopManagement.csproj|C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\login\\petmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{468DB0A9-EE5F-4723-BFDB-BB6BADA90B02}|Login\\PetShopManagement.csproj|solutionrelative:login\\petmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -94,257 +50,124 @@
       "DocumentGroups": [
         {
           "DockedWidth": 204,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CustomerModule.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\Login\\CustomerModule.cs",
+              "RelativeDocumentMoniker": "Login\\CustomerModule.cs",
+              "ToolTip": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\Login\\CustomerModule.cs [Design]",
+              "RelativeToolTip": "Login\\CustomerModule.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T15:26:31.256Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AppointmentModule.cs",
+              "DocumentMoniker": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\Login\\AppointmentModule.cs",
+              "RelativeDocumentMoniker": "Login\\AppointmentModule.cs",
+              "ToolTip": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\Login\\AppointmentModule.cs",
+              "RelativeToolTip": "Login\\AppointmentModule.cs",
+              "ViewState": "AgIAAI4AAAAAAAAAAAAkwLUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T14:43:14.317Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AppointmentDL.cs",
+              "DocumentMoniker": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\DataLayer\\AppointmentDL.cs",
+              "RelativeDocumentMoniker": "DataLayer\\AppointmentDL.cs",
+              "ToolTip": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\DataLayer\\AppointmentDL.cs",
+              "RelativeToolTip": "DataLayer\\AppointmentDL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T14:43:06.469Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "PermissionService.cs",
+              "DocumentMoniker": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\BusinessLayer\\PermissionService.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\PermissionService.cs",
+              "ToolTip": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\BusinessLayer\\PermissionService.cs",
+              "RelativeToolTip": "BusinessLayer\\PermissionService.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAlwD0AAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T13:25:41.552Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductModule.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\Login\\ProductModule.cs",
+              "RelativeDocumentMoniker": "Login\\ProductModule.cs",
+              "ToolTip": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\Login\\ProductModule.cs [Design]",
+              "RelativeToolTip": "Login\\ProductModule.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T12:51:53.455Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CashCustomer.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\Login\\CashCustomer.cs",
+              "RelativeDocumentMoniker": "Login\\CashCustomer.cs",
+              "ToolTip": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\Login\\CashCustomer.cs [Design]",
+              "RelativeToolTip": "Login\\CashCustomer.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T12:44:10.416Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CashProduct.cs",
+              "DocumentMoniker": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\Login\\CashProduct.cs",
+              "RelativeDocumentMoniker": "Login\\CashProduct.cs",
+              "ToolTip": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\Login\\CashProduct.cs",
+              "RelativeToolTip": "Login\\CashProduct.cs",
+              "ViewState": "AgIAALoAAAAAXW+nsbotwCMAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T12:41:57.904Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CashProduct.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\Login\\CashProduct.cs",
+              "RelativeDocumentMoniker": "Login\\CashProduct.cs",
+              "ToolTip": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\Login\\CashProduct.cs [Design]",
+              "RelativeToolTip": "Login\\CashProduct.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T12:38:55.873Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "CashForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\Login\\CashForm.cs",
               "RelativeDocumentMoniker": "Login\\CashForm.cs",
               "ToolTip": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\Login\\CashForm.cs [Design]",
               "RelativeToolTip": "Login\\CashForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T07:43:35.715Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Home.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\Login\\Home.cs",
-              "RelativeDocumentMoniker": "Login\\Home.cs",
-              "ToolTip": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\Login\\Home.cs [Design]",
-              "RelativeToolTip": "Login\\Home.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T06:22:15.392Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CashProductBL.cs",
-              "DocumentMoniker": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\BusinessLayer\\CashProductBL.cs",
-              "RelativeDocumentMoniker": "BusinessLayer\\CashProductBL.cs",
-              "ToolTip": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\BusinessLayer\\CashProductBL.cs",
-              "RelativeToolTip": "BusinessLayer\\CashProductBL.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T18:46:13.825Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "CashCustomerBL.cs",
-              "DocumentMoniker": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\BusinessLayer\\CashCustomerBL.cs",
-              "RelativeDocumentMoniker": "BusinessLayer\\CashCustomerBL.cs",
-              "ToolTip": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\BusinessLayer\\CashCustomerBL.cs",
-              "RelativeToolTip": "BusinessLayer\\CashCustomerBL.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T18:46:06.666Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CashBL.cs",
-              "DocumentMoniker": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\BusinessLayer\\CashBL.cs",
-              "RelativeDocumentMoniker": "BusinessLayer\\CashBL.cs",
-              "ToolTip": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\BusinessLayer\\CashBL.cs",
-              "RelativeToolTip": "BusinessLayer\\CashBL.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAswG8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T18:41:10.909Z"
+              "WhenOpened": "2025-05-14T12:38:08.809Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "CashDL.cs",
-              "DocumentMoniker": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\DataLayer\\CashDL.cs",
-              "RelativeDocumentMoniker": "DataLayer\\CashDL.cs",
-              "ToolTip": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\DataLayer\\CashDL.cs",
-              "RelativeToolTip": "DataLayer\\CashDL.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAiwJYAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T18:45:23.042Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Cash.cs",
-              "DocumentMoniker": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\TransObject\\Cash.cs",
-              "RelativeDocumentMoniker": "TransObject\\Cash.cs",
-              "ToolTip": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\TransObject\\Cash.cs",
-              "RelativeToolTip": "TransObject\\Cash.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T18:44:41.892Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LogForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\Login\\LogForm.cs",
-              "RelativeDocumentMoniker": "Login\\LogForm.cs",
-              "ToolTip": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\Login\\LogForm.cs [Design]",
-              "RelativeToolTip": "Login\\LogForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T18:43:53.978Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CashForm.cs",
-              "DocumentMoniker": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\Login\\CashForm.cs",
-              "RelativeDocumentMoniker": "Login\\CashForm.cs",
-              "ToolTip": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\Login\\CashForm.cs",
-              "RelativeToolTip": "Login\\CashForm.cs",
-              "ViewState": "AgIAAJoBAAAAAAAAAAAAwB0BAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T18:46:53.029Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ProductModule.cs",
-              "DocumentMoniker": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\Login\\ProductModule.cs",
-              "RelativeDocumentMoniker": "Login\\ProductModule.cs",
-              "ToolTip": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\Login\\ProductModule.cs",
-              "RelativeToolTip": "Login\\ProductModule.cs",
-              "ViewState": "AgIAAHcAAAAAAAAAAAAIwIQAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T11:41:37.764Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CashCustomerDL.cs",
-              "DocumentMoniker": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\DataLayer\\CashCustomerDL.cs",
-              "RelativeDocumentMoniker": "DataLayer\\CashCustomerDL.cs",
-              "ToolTip": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\DataLayer\\CashCustomerDL.cs",
-              "RelativeToolTip": "DataLayer\\CashCustomerDL.cs",
-              "ViewState": "AgIAAFAAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T18:46:25.017Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Scripts_PetShop.sql",
-              "DocumentMoniker": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\Scripts_PetShop.sql",
-              "RelativeDocumentMoniker": "Scripts_PetShop.sql",
-              "ToolTip": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\Scripts_PetShop.sql",
-              "RelativeToolTip": "Scripts_PetShop.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-05-13T11:43:17.796Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
               "Title": "PetModule.cs [Design]",
               "DocumentMoniker": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\Login\\PetModule.cs",
               "RelativeDocumentMoniker": "Login\\PetModule.cs",
               "ToolTip": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\Login\\PetModule.cs [Design]",
               "RelativeToolTip": "Login\\PetModule.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T18:43:40.21Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "PetBL.cs",
-              "DocumentMoniker": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\BusinessLayer\\PetBL.cs",
-              "RelativeDocumentMoniker": "BusinessLayer\\PetBL.cs",
-              "ToolTip": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\BusinessLayer\\PetBL.cs",
-              "RelativeToolTip": "BusinessLayer\\PetBL.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAgwDgAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T12:12:16.249Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "PetDL.cs",
-              "DocumentMoniker": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\DataLayer\\PetDL.cs",
-              "RelativeDocumentMoniker": "DataLayer\\PetDL.cs",
-              "ToolTip": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\DataLayer\\PetDL.cs",
-              "RelativeToolTip": "DataLayer\\PetDL.cs",
-              "ViewState": "AgIAAGgAAAAAAAAAAIA2wGMAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T12:11:56.958Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "PetModule.cs",
-              "DocumentMoniker": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\Login\\PetModule.cs",
-              "RelativeDocumentMoniker": "Login\\PetModule.cs",
-              "ToolTip": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\Login\\PetModule.cs",
-              "RelativeToolTip": "Login\\PetModule.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAowCUAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T11:43:09.372Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "EmployeeModel.cs",
-              "DocumentMoniker": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\Login\\EmployeeModel.cs",
-              "RelativeDocumentMoniker": "Login\\EmployeeModel.cs",
-              "ToolTip": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\Login\\EmployeeModel.cs",
-              "RelativeToolTip": "Login\\EmployeeModel.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAqwKgAAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T11:39:18.806Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "CustomerModule.cs",
-              "DocumentMoniker": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\Login\\CustomerModule.cs",
-              "RelativeDocumentMoniker": "Login\\CustomerModule.cs",
-              "ToolTip": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\Login\\CustomerModule.cs",
-              "RelativeToolTip": "Login\\CustomerModule.cs",
-              "ViewState": "AgIAAI4AAAAAAAAAAAAWwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T11:39:07.109Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Dashboard.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\Login\\Dashboard.cs",
-              "RelativeDocumentMoniker": "Login\\Dashboard.cs",
-              "ToolTip": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\Login\\Dashboard.cs [Design]",
-              "RelativeToolTip": "Login\\Dashboard.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T11:29:00.925Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Dashboard.cs",
-              "DocumentMoniker": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\Login\\Dashboard.cs",
-              "RelativeDocumentMoniker": "Login\\Dashboard.cs",
-              "ToolTip": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\Login\\Dashboard.cs",
-              "RelativeToolTip": "Login\\Dashboard.cs",
-              "ViewState": "AgIAAG8AAAAAAAAAAAAewLEAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T04:53:49.466Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "AppointmentModule.cs",
-              "DocumentMoniker": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\Login\\AppointmentModule.cs",
-              "RelativeDocumentMoniker": "Login\\AppointmentModule.cs",
-              "ToolTip": "C:\\Users\\MINH TUYET\\OneDrive\\Hi\u0300nh a\u0309nh\\BTL-LTCSDL\\PetShop_Management_System\\Login\\AppointmentModule.cs",
-              "RelativeToolTip": "Login\\AppointmentModule.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAADwv0kAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T03:47:37.246Z"
+              "WhenOpened": "2025-05-14T12:32:39.119Z"
             }
           ]
         }

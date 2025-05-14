@@ -23,8 +23,7 @@ namespace BusinessLayer
 
         public bool CanAccessDashboard()
         {
-            return position == "Quản lý" || position == "Nhân viên bán hàng" ||
-                   position == "Nhân viên chăm sóc" || position == "Kế toán";
+            return position == "Quản lý" || position == "Kế toán";
         }
 
         public bool CanAccessCustomer()
@@ -39,12 +38,12 @@ namespace BusinessLayer
 
         public bool CanAccessProduct()
         {
-            return position == "Quản lý" || position == "Nhân viên bán hàng";
+            return position == "Quản lý" || position == "Kế toán" || position == "Nhân viên bán hàng";
         }
 
         public bool CanAccessPet()
         {
-            return position == "Quản lý" || position == "Nhân viên chăm sóc";
+            return position != ""; // tất cả các vai trò đều được
         }
 
         public bool CanAccessAppointment()
@@ -54,7 +53,7 @@ namespace BusinessLayer
 
         public bool CanAccessCash()
         {
-            return position == "Quản lý" || position == "Kế toán";
+            return position == "Quản lý" || position == "Kế toán" || position == "Nhân viên bán hàng";
         }
 
         // Hàm tiện ích dùng chung

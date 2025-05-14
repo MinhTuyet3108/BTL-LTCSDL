@@ -63,15 +63,6 @@ CONSTRAINT PK_Product PRIMARY KEY (ProductID)
 );
 GO
 
--- TẠO BẢNG [dbo].[Service]
-CREATE TABLE [dbo].[Service] (
-[ServiceID][INT] IDENTITY(1,1) NOT NULL,
-[ServiceName][NVARCHAR](255) NOT NULL,
-[Price][DECIMAL](10, 2) NOT NULL,
-CONSTRAINT PK_Service PRIMARY KEY (ServiceID)
-);
-GO
-
 -- TẠO BẢNG [dbo].[Cash]
 CREATE TABLE [dbo].[Cash] (
 [CashID][VARCHAR](10) NOT NULL,
@@ -87,6 +78,35 @@ CREATE TABLE [dbo].[Cash] (
 CONSTRAINT PK_Cash PRIMARY KEY (CashID)
 );
 GO
+
+-- TẠO BẢNG [dbo].[Service]
+CREATE TABLE [dbo].[Service] (
+[ServiceID][INT] NOT NULL,
+[ServiceName][NVARCHAR](255) NOT NULL,
+[Price][DECIMAL](10, 2) NOT NULL,
+CONSTRAINT PK_Service PRIMARY KEY (ServiceID)
+);
+GO
+
+-- TẠO BẢNG Invoice
+CREATE TABLE Invoice (
+    InvoiceID VARCHAR(50) PRIMARY KEY,
+    InvoiceDate DATETIME NOT NULL,
+    Total DECIMAL(10, 2) NOT NULL,
+    CustomerID VARCHAR(10) NOT NULL,
+    EmployeeID VARCHAR(10) NOT NULL,
+    FOREIGN KEY (CustomerID) REFERENCES Customer(CustomerID),
+    FOREIGN KEY (EmployeeID) REFERENCES Employee(EmployeeID)
+);
+
+-- TẠO BẢNG InvoiceDetail
+CREATE TABLE InvoiceDetail (
+    InvoiceDetailID VARCHAR(50) PRIMARY KEY,
+    InvoiceID VARCHAR(50) NOT NULL,
+    ProductID VARCHAR(10) NOT NULL,
+    FOREIGN KEY (InvoiceID) REFERENCES Invoice(InvoiceID),
+    FOREIGN KEY (ProductID) REFERENCES Product(ProductID)
+);
 
 ALTER TABLE [dbo].[Cash] 
 ADD CONSTRAINT FK_Cash_Customer FOREIGN KEY (Cid)

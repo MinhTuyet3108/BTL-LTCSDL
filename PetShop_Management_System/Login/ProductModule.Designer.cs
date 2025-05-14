@@ -94,9 +94,8 @@
             this.lblPcode.AutoSize = true;
             this.lblPcode.Location = new System.Drawing.Point(12, 593);
             this.lblPcode.Name = "lblPcode";
-            this.lblPcode.Size = new System.Drawing.Size(72, 22);
+            this.lblPcode.Size = new System.Drawing.Size(0, 22);
             this.lblPcode.TabIndex = 48;
-            this.lblPcode.Text = "pcode";
             this.lblPcode.Visible = false;
             // 
             // lblStock
